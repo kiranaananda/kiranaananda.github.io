@@ -1,7 +1,7 @@
 html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-  font-family: sans-serif;
+  font-family: "Hind Siliguri", sans-serif;
 }
 
 body {
@@ -49,6 +49,7 @@ dfn {
 h1 {
   margin: .67em 0;
   font-size: 2em;
+  font-family:"Playpen Sans", sans-serif;
 }
 
 mark {
