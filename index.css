@@ -2340,7 +2340,7 @@ textarea.w-input, textarea.w-select {
   margin-right: 20px;
   padding: 5px 10px;
   font-size: 14px;
-  font-weight: 700;
+/*   font-weight: 700; */
   line-height: 20px;
   text-decoration: none;
 }
