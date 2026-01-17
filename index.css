@@ -2227,6 +2227,8 @@ textarea.w-input, textarea.w-select {
   align-items: center;
   margin-bottom: 0;
   display: flex;
+  display: flex;
+  list-style: none;
 }
 
 .nav-link {
@@ -2535,8 +2537,9 @@ textarea.w-input, textarea.w-select {
   }
 
   .nav-divider {
-    width: 200px;
-    height: 1px;
+    width: 1px;
+    height: 20px;
+    background-color: #ccc;
     max-width: 100%;
     margin-top: 10px;
     margin-bottom: 10px;
