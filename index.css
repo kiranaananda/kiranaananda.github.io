@@ -80,24 +80,6 @@ img {
   border: 0;
 }
 
-author__img {
-  position: relative; 
-  overflow: hidden;
-  
-  display: block;
-  max-width: 130px;
-  max-height: 130px;
-  margin: 0 auto 30px;
-  border-radius: 50%;
-  background-color: $gray-white;
-  transition: opacity 100ms ease;
-  &:hover {
-    .avatar {
-      opacity: 0.9;
-    }
-  }
-}
-
 svg:not(:root) {
   overflow: hidden;
 }
@@ -2600,3 +2582,22 @@ textarea.w-input, textarea.w-select {
     flex-direction: column;
   }
 }
+
+.hero-profile-img {
+  position: relative; 
+  overflow: hidden;
+  
+  display: block;
+  max-width: 130px;
+  max-height: 130px;
+  margin: 0 auto 30px;
+  border-radius: 50%;
+  background-color: $gray-white;
+  transition: opacity 100ms ease;
+  &:hover {
+    .avatar {
+      opacity: 0.9;
+    }
+  }
+}
+
