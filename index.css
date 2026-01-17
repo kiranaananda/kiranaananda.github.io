@@ -2394,7 +2394,7 @@ textarea.w-input, textarea.w-select {
 }
 
 .hero-wrapper {
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   display: flex;
 }
