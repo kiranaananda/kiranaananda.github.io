@@ -52,12 +52,6 @@ dfn {
   font-style: italic;
 }
 
-h1 {
-  margin: .67em 0;
-  font-size: 2em;
-  font-family:"Playpen Sans", sans-serif;
-}
-
 mark {
   color: #000;
   background: #ff0;
@@ -390,18 +384,21 @@ h1 {
   margin-top: 20px;
   font-size: 38px;
   line-height: 44px;
+  font-family:"Playpen Sans", sans-serif;
 }
 
 h2 {
   margin-top: 20px;
   font-size: 32px;
   line-height: 36px;
+  font-family:"Playpen Sans", sans-serif;
 }
 
 h3 {
   margin-top: 20px;
   font-size: 24px;
   line-height: 30px;
+  font-family:"Playpen Sans", sans-serif;
 }
 
 h4 {
