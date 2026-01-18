@@ -2691,3 +2691,61 @@ textarea.w-input, textarea.w-select {
   transform: scale(1.05) rotate(0deg); /* Straightens out when you look at it */
   cursor: pointer;
 }
+
+/* -------------- foooter css ------------ */
+
+/* The Outer Wrapper */
+.footer-custom-wrapper {
+  padding: 40px 0;
+  background-color: #ffffff;
+  border-top: 1px solid #f0f0f0;
+  width: 100%;
+}
+
+/* The List Container */
+.footer-nav-list {
+  display: flex;
+  flex-direction: row; /* Stays horizontal */
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Individual Links */
+.footer-nav-link, .footer-nav-accent {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: #333;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.footer-nav-link:hover, .footer-nav-accent:hover {
+  opacity: 0.7;
+}
+
+/* The Divider Bar */
+.footer-nav-divider {
+  width: 1px;
+  height: 20px;
+  background-color: #e0e0e0;
+}
+
+/* MOBILE: Keep it horizontal until the screen is very small */
+@media (max-width: 479px) {
+  .footer-nav-list {
+    flex-wrap: wrap; /* Allows it to wrap if the phone is tiny */
+    gap: 15px;
+  }
+  
+  .footer-nav-divider-item {
+    display: none; /* Hides divider on mobile for a cleaner look */
+  }
+}
+
