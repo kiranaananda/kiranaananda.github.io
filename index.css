@@ -2614,170 +2614,171 @@ textarea.w-input, textarea.w-select {
 }
 
 /* -------------- resume ------------ */
-.resume-flow-wrapper {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 40px 20px;
-}
-.interests-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-}
-
-.resume-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
-  gap: 40px;
-  align-items: start;
-}
-
-@media (max-width: 768px) {
-  .resume-grid {
-    grid-template-columns: 1fr; /* Forces exactly one column per line */
+/* --- RESUME WRAPPER --- */
+  .resume-flow-wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 60px 20px;
+    font-family: 'Inter', sans-serif; /* Fallback font */
+    color: #333;
   }
-}
 
-.interest-card {
-  flex: 1 1 300px;
-  min-width: 250px;
-  max-width: 100%;
-  word-wrap: break-word;
-  padding: 30px;
-  box-sizing: border-box; 
-}
+  /* --- SECTION LAYOUT --- */
+  .resume-row {
+    display: flex;
+    margin-bottom: 80px;
+  }
 
-.resume-row {
-  display: flex;
-  margin-bottom: 60px;
-}
+  .resume-side {
+    flex: 0 0 150px;
+  }
 
-.resume-side {
-  flex: 0 0 150px;
-}
+  .side-label {
+    font-family: 'Playpen Sans', cursive;
+    font-size: 13px;
+    color: #aaa;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 5px;
+  }
 
-.side-label {
-  font-size: 14px;
-  color: #aaa;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-}
+  .resume-main {
+    flex: 1;
+    position: relative;
+  }
 
-.resume-main {
-  flex: 1;
-  position: relative;
-}
+  /* --- EXPERIENCE ENTRIES --- */
+  .experience-entry {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 50px;
+  }
 
-.experience-entry {
-  display: flex;
-  gap: 30px;
-  margin-bottom: 40px;
-}
+  .logo-timeline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 0 0 80px;
+  }
 
-.logo-timeline {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  flex: 0 0 80px;
-}
+  .company-logo {
+    width: 100%;
+    height: auto;
+    max-height: 40px;
+    object-fit: contain;
+    margin-bottom: 15px;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+  }
 
-.company-logo {
-  width: 100%;
-  height: auto;
-  max-height: 40px;
-  object-fit: contain;
-  margin-bottom: 15px;
-  filter: grayscale(100%);
-  transition: filter 0.3s ease;
-}
+  .company-logo:hover {
+    filter: grayscale(0%);
+  }
 
-.company-logo:hover {
-  filter: grayscale(0%);
-}
+  .timeline-line {
+    width: 1px;
+    flex-grow: 1;
+    background-color: #eee;
+    min-height: 30px;
+  }
 
-.timeline-line {
-  width: 1px;
-  flex-grow: 1;
-  background-color: #eee;
-}
+  .experience-details {
+    flex: 1;
+  }
 
-.entry-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-}
+  .entry-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 5px;
+  }
 
-.role-title {
-  font-weight: 700;
-  font-size: 1.1rem;
-  margin: 0;
-}
+  .role-title {
+    font-weight: 700;
+    font-size: 1.15rem;
+    margin: 0;
+  }
 
-.entry-date {
-  font-size: 13px;
-  color: #888;
-}
+  .entry-date {
+    font-size: 13px;
+    color: #888;
+  }
 
-.company-info {
-  font-size: 14px;
-  color: #555;
-  margin: 5px 0 15px 0;
-  font-style: italic;
-}
+  .company-info {
+    font-size: 14px;
+    color: #555;
+    margin: 0 0 15px 0;
+    font-style: italic;
+  }
 
-.bullet-list {
-  padding-left: 18px;
-  color: #444;
-}
+  .bullet-list {
+    padding-left: 18px;
+    margin: 0;
+    color: #444;
+    line-height: 1.6;
+  }
 
-.skills-grid-seamless {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 30px;
-  padding-left: 30px;
-}
+  .bullet-list li {
+    margin-bottom: 8px;
+  }
 
-.skill-cat-title {
-  font-family: 'Playpen Sans', cursive;
-  font-size: 16px;
-  margin-bottom: 8px;
-  color: #333;
-}
-
-.skill-text {
-  font-size: 14px;
-  line-height: 1.6;
-  color: #666;
-  margin: 0;
-}
-
-.edu-details {
-  font-size: 14px;
-  color: #666;
-  line-height: 1.5;
-  margin-top: 8px;
-  padding: 10px;
-  background-color: #f9f9f9;
-  border-radius: 4px;
-}
-
-/* Mobile: Adjust styles for small screens */
-@media (max-width: 768px) {
-  .resume-row { flex-direction: column; }
-  .experience-entry { flex-direction: column; gap: 10px; }
-  .logo-timeline { align-items: flex-start; flex: none; }
-  .timeline-line { display: none; }
+  /* --- SKILLS GRID --- */
   .skills-grid-seamless {
-    grid-template-columns: 1fr;
-    padding-left: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    padding-left: 30px; /* Aligns with text start */
   }
-}
 
-.resume-row:not(:last-child) .timeline-line {
-  min-height: 50px;
-}
+  .skill-cat-title {
+    font-family: 'Playpen Sans', cursive;
+    font-size: 16px;
+    margin: 0 0 8px 0;
+    color: #333;
+  }
 
+  .skill-text {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #666;
+    margin: 0;
+  }
+
+  /* --- EDUCATION SPECIAL STYLING --- */
+  .edu-details {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.5;
+    margin-top: 10px;
+    padding: 12px;
+    background-color: #fcfcfc;
+    border-left: 3px solid #eee;
+    border-radius: 4px;
+  }
+
+  /* --- RESPONSIVE FIXES --- */
+  @media (max-width: 850px) {
+    .resume-row {
+      flex-direction: column;
+    }
+    .resume-side {
+      margin-bottom: 30px;
+    }
+    .skills-grid-seamless {
+      grid-template-columns: 1fr;
+      padding-left: 0;
+    }
+    .entry-header {
+      flex-direction: column;
+      gap: 4px;
+    }
+    .logo-timeline {
+      flex: 0 0 60px;
+    }
+    .timeline-line {
+      display: none; /* Cleaner on mobile */
+    }
+  }
 /* -------------- feature card -------------------- */
 .features-section {
   background-color: #ffffff;
