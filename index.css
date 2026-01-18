@@ -380,27 +380,25 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0.75rem;
   font-weight: bold;
   color: #1a1a1a;
+  font-family: "Playpen Sans", sans-serif;
 }
 
 h1 {
   margin-top: 0;
   font-size: 2.5rem;
   line-height: 1.1;
-  font-family: "Playpen Sans", sans-serif;
 }
 
 h2 {
   margin-top: 2.5rem;
   font-size: 2rem;
   line-height: 1.2;
-  font-family: "Playpen Sans", sans-serif;
 }
 
 h3 {
   margin-top: 2rem;
   font-size: 1.75rem;
   line-height: 1.2;
-  font-family: "Playpen Sans", sans-serif;
 }
 
 h4 {
@@ -432,8 +430,8 @@ blockquote {
   border-left: 5px solid #e2e2e2;
   margin: 0 0 10px;
   padding: 10px 20px;
-  font-size: 18px;
   line-height: 22px;
+  font-family: "Playpen Sans", sans-serif;
 }
 
 figure {
@@ -2057,6 +2055,22 @@ textarea.w-input, textarea.w-select {
   display: block;
 }
 
+.features-section {
+    padding: 40px 15px;
+  }
+  
+  .feature-card {
+    padding: 20px;
+    min-width: 100%;
+  }
+  
+  .feature-icon {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 16px;
+  }
+}
+
 @media screen and (max-width: 479px) {
   .w-tab-link {
     display: block;
@@ -2619,16 +2633,18 @@ textarea.w-input, textarea.w-select {
   justify-content: center;
   gap: 24px;
   flex-wrap: wrap;
+  width: 100%;
 }
 
 .feature-card {
   background-color: #f8f9fb;
   border-radius: 24px;
   padding: 40px;
-  flex: 1;
+  flex: 1 1 30%;
   min-width: 20%;
   max-width: 30%;
   text-align: left;
+  box-sizing: border-box;
 }
 
 .feature-icon {
