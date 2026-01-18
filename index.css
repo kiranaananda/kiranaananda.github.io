@@ -2247,7 +2247,6 @@ textarea.w-input, textarea.w-select {
   margin-left: 5px;
   margin-right: 5px;
   padding: 5px 10px;
-  font-size: 14px;
   line-height: 20px;
   text-decoration: none;
 }
@@ -2278,7 +2277,6 @@ textarea.w-input, textarea.w-select {
 .nav-dropdown-toggle {
   letter-spacing: .25px;
   padding: 5px 30px 5px 10px;
-  font-size: 14px;
   line-height: 20px;
 }
 
@@ -2317,7 +2315,6 @@ textarea.w-input, textarea.w-select {
 .nav-dropdown-link {
   padding-top: 5px;
   padding-bottom: 5px;
-  font-size: 14px;
 }
 
 .nav-dropdown-link:focus-visible {
@@ -2348,7 +2345,6 @@ textarea.w-input, textarea.w-select {
   margin-left: 5px;
   margin-right: 20px;
   padding: 5px 10px;
-  font-size: 14px;
 /*   font-weight: 700; */
   line-height: 20px;
   text-decoration: none;
@@ -2364,7 +2360,6 @@ textarea.w-input, textarea.w-select {
   text-transform: uppercase;
   background-color: #1a1b1f;
   padding: 12px 25px;
-  font-size: 12px;
   line-height: 20px;
   transition: all .2s;
 }
@@ -2384,7 +2379,6 @@ textarea.w-input, textarea.w-select {
   text-transform: uppercase;
   background-color: #1a1b1f;
   padding: 12px 25px;
-  font-size: 12px;
   line-height: 20px;
   transition: all .2s;
 }
