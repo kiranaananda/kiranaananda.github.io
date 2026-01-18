@@ -1964,6 +1964,7 @@ textarea.w-input, textarea.w-select {
   .w-nav[data-collapse="medium"] .w-nav-button {
     display: block;
   }
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -2608,6 +2609,7 @@ textarea.w-input, textarea.w-select {
     }
   }
 }
+
 /* -------------- feature card -------------------- */
 .features-section {
   background-color: #ffffff;
@@ -2649,6 +2651,7 @@ textarea.w-input, textarea.w-select {
   height: 24px;
 }
 
+/* -------------- thought cloud -------------------- */
 .thought-cloud-section {
   background-color: #f5f7fa;
 }
@@ -2657,7 +2660,7 @@ textarea.w-input, textarea.w-select {
   max-width: 900px;
   margin: 0 auto;
   padding: 60px 20px;
-  text-align: center; /* Centers the whole 'cloud' */
+  text-align: center;
 }
 
 .thought-item {
@@ -2665,10 +2668,10 @@ textarea.w-input, textarea.w-select {
   padding: 30px;
   margin: 15px;
   max-width: 300px;
-  border-radius: 40px 10px 40px 10px; /* Asymmetrical 'leaf' shape */
+  border-radius: 40px 10px 40px 10px; 
   font-family: 'Playpen Sans', cursive;
   line-height: 1.4;
-  box-shadow: 5px 5px 15px rgba(0,0,0,0.05); /* Very soft shadow */
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.05);
   transition: transform 0.3s ease;
 }
 
@@ -2680,15 +2683,13 @@ textarea.w-input, textarea.w-select {
 .shift-down { margin-top: 50px; }
 .shift-up { margin-top: -20px; }
 
-/* Soft, Organic Colors */
 .note-blue { background-color: #eef7ff; color: #4a6fa5; }
 .note-yellow { background-color: #fffdf0; color: #8a7d32; }
 .note-pink { background-color: #fff0f5; color: #a54a6f; }
 .note-green { background-color: #f0fff4; color: #4a8a5f; }
 
-/* Interaction: Make them feel alive */
 .thought-item:hover {
-  transform: scale(1.05) rotate(0deg); /* Straightens out when you look at it */
+  transform: scale(1.05) rotate(0deg);
   cursor: pointer;
 }
 
@@ -2741,7 +2742,9 @@ textarea.w-input, textarea.w-select {
     flex-wrap: wrap; /* Allows it to wrap if the phone is tiny */
     gap: 15px;
   }
-  
+  .nav-divider {
+    display: none !important;
+  }
   .footer-nav-divider-item {
     display: none; /* Hides divider on mobile for a cleaner look */
   }
