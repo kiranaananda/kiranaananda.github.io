@@ -2614,7 +2614,10 @@ textarea.w-input, textarea.w-select {
 }
 
 /* -------------- resume ------------ */
-.resume-section { padding: 60px 0;}
+.resume-section { 
+  padding: 60px 0;
+  background-color: #f5f7fa;
+}
 
 .resume-header-row { 
   display: flex; 
