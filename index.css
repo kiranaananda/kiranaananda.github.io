@@ -2625,7 +2625,10 @@ textarea.w-input, textarea.w-select {
     color: #333;
   }
   .resume-header- {
-    justify-content: center;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    width: 100%;
   }
   .resume-header-row { 
     display: flex; 
