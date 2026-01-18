@@ -2624,19 +2624,11 @@ textarea.w-input, textarea.w-select {
     padding: 60px 20px;
     color: #333;
   }
-  .resume-header- {
-    display: flex;
-    justify-content: space-between; 
-    align-items: center; 
-    width: 100%;
-  }
   .resume-header-row { 
     display: flex; 
-    justify-content: space-between; 
+    justify-content: center; 
     align-items: center; 
-    margin-bottom: 40px; 
-    border-bottom: 2px solid #f1f0f0;
-    padding-bottom: 20px;
+    width:100%;
   }
 
   /* --- SECTION LAYOUT --- */
