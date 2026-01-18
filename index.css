@@ -2220,6 +2220,15 @@ textarea.w-input, textarea.w-select {
   padding-bottom: 20px;
 }
 
+.navbar-logo-bottom-container {
+  z-index: 5;
+  width: 1030px;
+  max-width: 100%;
+  background-color: #f5f7fa;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 15px 20px;
+}
 .navbar-wrapper {
   justify-content: space-between;
   align-items: center;
