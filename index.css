@@ -2614,82 +2614,135 @@ textarea.w-input, textarea.w-select {
 }
 
 /* -------------- resume ------------ */
-.resume-section { 
-  padding: 60px 0;
-  background-color: #f5f7fa;
-}
-
-.resume-header-row { 
-  display: flex; 
-  justify-content: space-between; 
-  align-items: center; 
-  margin-bottom: 40px; 
-  border-bottom: 2px solid #f1f0f0;
-  padding-bottom: 20px;
-}
-
-.category-title {
-  background: #f1f0f0;
-  padding: 8px 20px;
-  font-size: 14px;
-  letter-spacing: 1px;
-  display: inline-block;
-  margin: 40px 0 25px 0;
-}
-
-.experience-card {
+.resume-row {
   display: flex;
-  gap: 25px;
-  margin-bottom: 35px;
+  margin-bottom: 60px;
 }
 
-.exp-logo-col { flex: 0 0 80px; } 
-
-.job-role { font-family: 'Playpen Sans', cursive; margin: 0; font-size: 18px; }
-
-.company-name { font-weight: 700; color: #333; }
-
-.exp-meta { font-size: 13px; color: #777; margin-top: 4px; }
-
-.exp-bullets { margin-top: 12px; padding-left: 20px; color: #444; }
-
-.exp-bullets li { margin-bottom: 8px; line-height: 1.5; }
-
-.skills-pill-container {
-  display: flex;
-  flex-wrap: wrap; /* This makes sure they wrap to the next line on mobile */
-  gap: 10px;
-  margin-top: 20px;
+.resume-side {
+  flex: 0 0 150px;
 }
 
-.pill {
-  padding: 8px 18px;
-  border-radius: 100px; /* Makes them perfectly rounded */
-  font-family: 'Inter', sans-serif;
+.side-label {
+  font-family: 'Playpen Sans', cursive;
   font-size: 14px;
-  font-weight: 500;
-  transition: all 0.3s ease;
-  border: 1px solid rgba(0,0,0,0.05);
-  cursor: default;
+  color: #aaa;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
-/* The Hover Animation */
-.pill:hover {
-  transform: translateY(-3px); /* Lifts the pill */
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+.resume-main {
+  flex: 1;
+  position: relative;
 }
 
-/* Category Colors */
-.quant { background-color: #E3F2FD; color: #1565C0; }
-.qual { background-color: #E8F5E9; color: #2E7D32; }
-.tool { background-color: #F3E5F5; color: #7B1FA2; }
-.personal { background-color: #FFFDE7; color: #FBC02D; }
+.experience-entry {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 40px;
+}
 
-/* Mobile View */
-@media (max-width: 600px) {
-  .experience-card { flex-direction: column; gap: 10px; }
-  .exp-logo-col { margin-bottom: 10px; }
-  .resume-header-row { flex-direction: column; align-items: flex-start; gap: 15px; }
+.logo-timeline {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 0 0 80px;
+}
+
+.company-logo {
+  width: 100%;
+  height: auto;
+  max-height: 40px;
+  object-fit: contain;
+  margin-bottom: 15px;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+
+.company-logo:hover {
+  filter: grayscale(0%);
+}
+
+.timeline-line {
+  width: 1px;
+  flex-grow: 1;
+  background-color: #eee;
+}
+
+.entry-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.role-title {
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.entry-date {
+  font-size: 13px;
+  color: #888;
+}
+
+.company-info {
+  font-size: 14px;
+  color: #555;
+  margin: 5px 0 15px 0;
+  font-style: italic;
+}
+
+.bullet-list {
+  padding-left: 18px;
+  color: #444;
+}
+
+.skills-grid-seamless {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  padding-left: 30px;
+}
+
+.skill-cat-title {
+  font-family: 'Playpen Sans', cursive;
+  font-size: 16px;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.skill-text {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #666;
+  margin: 0;
+}
+
+.edu-details {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.5;
+  margin-top: 8px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 4px;
+}
+
+/* Mobile: Adjust styles for small screens */
+@media (max-width: 768px) {
+  .resume-row { flex-direction: column; }
+  .experience-entry { flex-direction: column; gap: 10px; }
+  .logo-timeline { align-items: flex-start; flex: none; }
+  .timeline-line { display: none; }
+  .skills-grid-seamless {
+    grid-template-columns: 1fr;
+    padding-left: 0;
+  }
+}
+
+.resume-row:not(:last-child) .timeline-line {
+  min-height: 50px;
 }
 
 /* -------------- feature card -------------------- */
