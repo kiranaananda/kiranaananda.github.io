@@ -12,7 +12,7 @@ body {
   color: #333;
   background-color: #fff;
   font-size: 1rem;
-  line-height: 20px;
+  line-height: 1.5;
 }
 
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
@@ -430,7 +430,7 @@ blockquote {
   border-left: 5px solid #e2e2e2;
   margin: 0 0 10px;
   padding: 10px 20px;
-  line-height: 22px;
+  line-height: 1.2;
   font-family: "Playpen Sans", sans-serif;
 }
 
@@ -1023,134 +1023,6 @@ textarea.w-input, textarea.w-select {
 
 .w-widget-map .gm-style-iw > button {
   display: none !important;
-}
-
-.w-widget-twitter {
-  overflow: hidden;
-}
-
-.w-widget-twitter-count-shim {
-  vertical-align: top;
-  width: 28px;
-  height: 20px;
-  text-align: center;
-  background: #fff;
-  border: 1px solid #758696;
-  border-radius: 3px;
-  display: inline-block;
-  position: relative;
-}
-
-.w-widget-twitter-count-shim * {
-  pointer-events: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-.w-widget-twitter-count-shim .w-widget-twitter-count-inner {
-  text-align: center;
-  color: #999;
-  font-family: serif;
-  line-height: 12px;
-  position: relative;
-}
-
-.w-widget-twitter-count-shim .w-widget-twitter-count-clear {
-  display: block;
-  position: relative;
-}
-
-.w-widget-twitter-count-shim.w--large {
-  width: 36px;
-  height: 28px;
-}
-
-.w-widget-twitter-count-shim.w--large .w-widget-twitter-count-inner {
-  line-height: 18px;
-}
-
-.w-widget-twitter-count-shim:not(.w--vertical) {
-  margin-left: 5px;
-  margin-right: 8px;
-}
-
-.w-widget-twitter-count-shim:not(.w--vertical).w--large {
-  margin-left: 6px;
-}
-
-.w-widget-twitter-count-shim:not(.w--vertical):before, .w-widget-twitter-count-shim:not(.w--vertical):after {
-  content: " ";
-  height: 0;
-  width: 0;
-  pointer-events: none;
-  border: solid rgba(0, 0, 0, 0);
-  position: absolute;
-  top: 50%;
-  left: 0;
-}
-
-.w-widget-twitter-count-shim:not(.w--vertical):before {
-  border-width: 4px;
-  border-color: rgba(117, 134, 150, 0) #5d6c7b rgba(117, 134, 150, 0) rgba(117, 134, 150, 0);
-  margin-top: -4px;
-  margin-left: -9px;
-}
-
-.w-widget-twitter-count-shim:not(.w--vertical).w--large:before {
-  border-width: 5px;
-  margin-top: -5px;
-  margin-left: -10px;
-}
-
-.w-widget-twitter-count-shim:not(.w--vertical):after {
-  border-width: 4px;
-  border-color: rgba(255, 255, 255, 0) #fff rgba(255, 255, 255, 0) rgba(255, 255, 255, 0);
-  margin-top: -4px;
-  margin-left: -8px;
-}
-
-.w-widget-twitter-count-shim:not(.w--vertical).w--large:after {
-  border-width: 5px;
-  margin-top: -5px;
-  margin-left: -9px;
-}
-
-.w-widget-twitter-count-shim.w--vertical {
-  width: 61px;
-  height: 33px;
-  margin-bottom: 8px;
-}
-
-.w-widget-twitter-count-shim.w--vertical:before, .w-widget-twitter-count-shim.w--vertical:after {
-  content: " ";
-  height: 0;
-  width: 0;
-  pointer-events: none;
-  border: solid rgba(0, 0, 0, 0);
-  position: absolute;
-  top: 100%;
-  left: 50%;
-}
-
-.w-widget-twitter-count-shim.w--vertical:before {
-  border-width: 5px;
-  border-color: #5d6c7b rgba(117, 134, 150, 0) rgba(117, 134, 150, 0);
-  margin-left: -5px;
-}
-
-.w-widget-twitter-count-shim.w--vertical:after {
-  border-width: 4px;
-  border-color: #fff rgba(255, 255, 255, 0) rgba(255, 255, 255, 0);
-  margin-left: -4px;
-}
-
-.w-widget-twitter-count-shim.w--vertical .w-widget-twitter-count-inner {
-  line-height: 22px;
-}
-
-.w-widget-twitter-count-shim.w--vertical.w--large {
-  width: 76px;
 }
 
 .w-background-video {
@@ -2643,7 +2515,6 @@ textarea.w-input, textarea.w-select {
 
   .side-label {
     font-family: 'Playpen Sans', cursive;
-    font-size: 13px;
     color: #aaa;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -2703,17 +2574,14 @@ textarea.w-input, textarea.w-select {
 
   .role-title {
     font-weight: 700;
-    font-size: 1.15rem;
     margin: 0;
   }
 
   .entry-date {
-    font-size: 13px;
     color: #888;
   }
 
   .company-info {
-    font-size: 14px;
     color: #555;
     margin: 0 0 15px 0;
     font-style: italic;
@@ -2740,13 +2608,11 @@ textarea.w-input, textarea.w-select {
 
   .skill-cat-title {
     font-family: 'Playpen Sans', cursive;
-    font-size: 16px;
     margin: 0 0 8px 0;
     color: #333;
   }
 
   .skill-text {
-    font-size: 14px;
     line-height: 1.6;
     color: #666;
     margin: 0;
@@ -2754,7 +2620,6 @@ textarea.w-input, textarea.w-select {
 
   /* --- EDUCATION SPECIAL STYLING --- */
   .edu-details {
-    font-size: 14px;
     color: #666;
     line-height: 1.5;
     margin-top: 10px;
