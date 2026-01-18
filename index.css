@@ -2710,8 +2710,8 @@ textarea.w-input, textarea.w-select {
   align-items: center;
   gap: 25px;
   list-style: none;
-  padding: 0;
-  margin: 0;
+  padding: 40px 0;
+  margin: 40px 0;
 }
 
 /* Individual Links */
