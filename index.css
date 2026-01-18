@@ -2614,6 +2614,35 @@ textarea.w-input, textarea.w-select {
 }
 
 /* -------------- resume ------------ */
+.interests-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.resume-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+  gap: 40px;
+  align-items: start;
+}
+
+@media (max-width: 768px) {
+  .resume-grid {
+    grid-template-columns: 1fr; /* Forces exactly one column per line */
+  }
+}
+
+.interest-card {
+  flex: 1 1 300px;
+  min-width: 250px;
+  max-width: 100%;
+  word-wrap: break-word;
+  padding: 30px;
+  box-sizing: border-box; 
+}
+
 .resume-row {
   display: flex;
   margin-bottom: 60px;
@@ -2624,7 +2653,6 @@ textarea.w-input, textarea.w-select {
 }
 
 .side-label {
-  font-family: 'Playpen Sans', cursive;
   font-size: 14px;
   color: #aaa;
   text-transform: uppercase;
