@@ -2220,18 +2220,6 @@ textarea.w-input, textarea.w-select {
   padding-bottom: 20px;
 }
 
-.navbar-logo-bottom {
-  background-color: #f5f7fa;
-} 
-.navbar-logo-bottom-container {
-  z-index: 5;
-  width: 1030px;
-  max-width: 100%;
-  background-color: #f5f7fa;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 15px 20px;
-}
 .navbar-wrapper {
   justify-content: space-between;
   align-items: center;
@@ -2679,6 +2667,7 @@ textarea.w-input, textarea.w-select {
 }
 
 .thought-container {
+  background-color: #f5f7fa;
   max-width: 900px;
   margin: 0 auto;
   padding: 60px 20px;
@@ -2692,7 +2681,7 @@ textarea.w-input, textarea.w-select {
   max-width: 300px;
   border-radius: 40px 10px 40px 10px; /* Asymmetrical 'leaf' shape */
   font-family: 'Playpen Sans', cursive;
-  font-size: 1.2rem;
+  font-size: 1rem;
   line-height: 1.4;
   box-shadow: 5px 5px 15px rgba(0,0,0,0.05); /* Very soft shadow */
   transition: transform 0.3s ease;
