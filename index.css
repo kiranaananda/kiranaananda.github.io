@@ -2230,7 +2230,6 @@ textarea.w-input, textarea.w-select {
   justify-content: space-between;
   align-items: center;
   display: flex;
-  position:fixed;
 }
 
 .nav-menu-two {
@@ -2633,8 +2632,8 @@ textarea.w-input, textarea.w-select {
   border-radius: 24px;
   padding: 40px;
   flex: 1;
-  min-width: 300px;
-  max-width: 400px;
+  min-width: 20%;
+  max-width: 30%;
   text-align: left;
 }
 
