@@ -2666,6 +2666,9 @@ textarea.w-input, textarea.w-select {
   line-height: 1.6;
 }
 
+.thought-cloud-section {
+  background-color: #f5f7fa;
+}
 .thought-container {
   background-color: #f5f7fa;
   max-width: 900px;
