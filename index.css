@@ -2742,9 +2742,6 @@ textarea.w-input, textarea.w-select {
     flex-wrap: wrap; /* Allows it to wrap if the phone is tiny */
     gap: 15px;
   }
-  .nav-divider {
-    display: none !important;
-  }
   .footer-nav-divider-item {
     display: none; /* Hides divider on mobile for a cleaner look */
   }
