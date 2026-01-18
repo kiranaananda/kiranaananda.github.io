@@ -2613,6 +2613,52 @@ textarea.w-input, textarea.w-select {
   }
 }
 
+/* -------------- resume ------------ */
+.resume-section { padding: 60px 0;}
+
+.resume-header-row { 
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  margin-bottom: 40px; 
+  border-bottom: 2px solid #f1f0f0;
+  padding-bottom: 20px;
+}
+
+.category-title {
+  background: #f1f0f0;
+  padding: 8px 20px;
+  font-size: 14px;
+  letter-spacing: 1px;
+  display: inline-block;
+  margin: 40px 0 25px 0;
+}
+
+.experience-card {
+  display: flex;
+  gap: 25px;
+  margin-bottom: 35px;
+}
+
+.exp-logo-col { flex: 0 0 80px; } 
+
+.job-role { font-family: 'Playpen Sans', cursive; margin: 0; font-size: 18px; }
+
+.company-name { font-weight: 700; color: #333; }
+
+.exp-meta { font-size: 13px; color: #777; margin-top: 4px; }
+
+.exp-bullets { margin-top: 12px; padding-left: 20px; color: #444; }
+
+.exp-bullets li { margin-bottom: 8px; line-height: 1.5; }
+
+/* Mobile View */
+@media (max-width: 600px) {
+  .experience-card { flex-direction: column; gap: 10px; }
+  .exp-logo-col { margin-bottom: 10px; }
+  .resume-header-row { flex-direction: column; align-items: flex-start; gap: 15px; }
+}
+
 /* -------------- feature card -------------------- */
 .features-section {
   background-color: #ffffff;
