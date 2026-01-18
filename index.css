@@ -2624,6 +2624,9 @@ textarea.w-input, textarea.w-select {
     padding: 60px 20px;
     color: #333;
   }
+  .resume-header- {
+    justify-content: center;
+  }
   .resume-header-row { 
     display: flex; 
     justify-content: space-between; 
