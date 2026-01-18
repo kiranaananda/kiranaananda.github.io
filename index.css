@@ -2614,6 +2614,11 @@ textarea.w-input, textarea.w-select {
 }
 
 /* -------------- resume ------------ */
+.resume-flow-wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
 .interests-wrapper {
   display: flex;
   flex-wrap: wrap;
