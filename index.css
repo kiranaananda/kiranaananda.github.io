@@ -2591,8 +2591,8 @@ textarea.w-input, textarea.w-select {
   overflow: hidden;
   
   display: block;
-  max-width: 130px;
-  max-height: 130px;
+  max-width: 200px;
+  max-height: 200px;
   margin: 0 auto 30px;
   border-radius: 50%;
   background-color: $gray-white;
