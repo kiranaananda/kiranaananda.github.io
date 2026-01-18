@@ -2710,8 +2710,8 @@ textarea.w-input, textarea.w-select {
   align-items: center;
   gap: 25px;
   list-style: none;
-  padding: 40px 0;
-  margin: 40px 0;
+  padding: 20px 0;
+  margin: 20px 0;
 }
 
 /* Individual Links */
@@ -2721,8 +2721,6 @@ textarea.w-input, textarea.w-select {
   gap: 8px;
   text-decoration: none;
   color: #333;
-  font-family: 'Inter', sans-serif;
-  font-size: 14px;
   transition: opacity 0.2s ease;
 }
 
