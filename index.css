@@ -2589,7 +2589,8 @@ textarea.w-input, textarea.w-select {
 .hero-profile-img {
   position: relative; 
   overflow: hidden;
-  display: flex;
+  display: grid;
+  place-items: center;
   justify-content: center;
   max-width: 160px;
   max-height: 160px;
