@@ -1982,6 +1982,9 @@ textarea.w-input, textarea.w-select {
 }
 
 @media screen and (max-width: 479px) {
+  .nav-divider {
+    display: none !important;
+  }
   .w-nav[data-collapse="tiny"] .w-nav-menu {
     display: none;
   }
