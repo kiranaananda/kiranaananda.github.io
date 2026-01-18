@@ -6,11 +6,12 @@ html {
 
 body {
   margin: 0;
-  font-family:"Noto Sans", sans-serif;
+  font-family:"Montserrat", sans-serif;
+  font-weight: 500;
   min-height: 100%;
   color: #333;
   background-color: #fff;
-  font-size: 15px;
+  font-size: 1rem;
   line-height: 20px;
 }
 
@@ -376,47 +377,50 @@ pre.w-code-block code {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  margin-bottom: 10px;
+  margin-bottom: 0.75rem;
   font-weight: bold;
+  color: #1a1a1a;
 }
 
 h1 {
-  margin-top: 20px;
-  font-size: 38px;
-  line-height: 44px;
-  font-family:"Playpen Sans", sans-serif;
+  margin-top: 0;
+  font-size: 2.5rem;
+  line-height: 1.1;
+  font-family: "Playpen Sans", sans-serif;
 }
 
 h2 {
-  margin-top: 20px;
-  font-size: 32px;
-  line-height: 36px;
-  font-family:"Playpen Sans", sans-serif;
+  margin-top: 2.5rem;
+  font-size: 2rem;
+  line-height: 1.2;
+  font-family: "Playpen Sans", sans-serif;
 }
 
 h3 {
-  margin-top: 20px;
-  font-size: 24px;
-  line-height: 30px;
-  font-family:"Playpen Sans", sans-serif;
+  margin-top: 2rem;
+  font-size: 1.75rem;
+  line-height: 1.2;
+  font-family: "Playpen Sans", sans-serif;
 }
 
 h4 {
-  margin-top: 10px;
-  font-size: 18px;
-  line-height: 24px;
+  margin-top: 1.5rem;
+  font-size: 1.5rem;
+  line-height: 1.3;
 }
 
 h5 {
-  margin-top: 10px;
-  font-size: 14px;
-  line-height: 20px;
+  margin-top: 1.25rem;
+  font-size: 1.25rem;
+  line-height: 1.3;
 }
 
 h6 {
-  margin-top: 10px;
-  font-size: 12px;
-  line-height: 18px;
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  line-height: 1.3;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 p {
@@ -2222,6 +2226,13 @@ textarea.w-input, textarea.w-select {
   display: flex;
 }
 
+.navbar-top {
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  position:fixed;
+}
+
 .nav-menu-two {
   justify-content: space-between;
   align-items: center;
@@ -2585,6 +2596,7 @@ textarea.w-input, textarea.w-select {
     flex-direction: column;
   }
 }
+/* ------------------------------------------------- */
 
 .hero-profile-img {
   position: relative; 
@@ -2592,8 +2604,7 @@ textarea.w-input, textarea.w-select {
   display: grid;
   place-items: center;
   justify-content: center;
-  max-width: 160px;
-  max-height: 160px;
+  max-width: 100%;
   margin: 0 auto 30px;
   border-radius: 50%;
   background-color: $gray-white;
@@ -2604,4 +2615,56 @@ textarea.w-input, textarea.w-select {
     }
   }
 }
+
+.features-section {
+  background-color: #ffffff;
+  padding: 60px 20px;
+}
+
+.features-grid {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.feature-card {
+  background-color: #f8f9fb;
+  border-radius: 24px;
+  padding: 40px;
+  flex: 1;
+  min-width: 300px;
+  max-width: 400px;
+  text-align: left;
+}
+
+.feature-icon {
+  background-color: #0f172a;
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.feature-icon img {
+  width: 24px;
+  height: 24px;
+}
+
+.feature-card h3 {
+  font-size: 1.5rem;
+  color: #1a1a1a;
+  margin-bottom: 16px;
+  font-weight: 700;
+}
+
+.feature-card p {
+  font-size: 1.1rem;
+  color: #4b5563;
+  line-height: 1.6;
+}
+
 
