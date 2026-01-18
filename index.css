@@ -2666,4 +2666,43 @@ textarea.w-input, textarea.w-select {
   line-height: 1.6;
 }
 
+.thought-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  text-align: center; /* Centers the whole 'cloud' */
+}
+
+.thought-item {
+  display: inline-block;
+  padding: 30px;
+  margin: 15px;
+  max-width: 300px;
+  border-radius: 40px 10px 40px 10px; /* Asymmetrical 'leaf' shape */
+  font-family: 'Playpen Sans', cursive;
+  font-size: 1.2rem;
+  line-height: 1.4;
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.05); /* Very soft shadow */
+  transition: transform 0.3s ease;
+}
+
+/* Personality Classes: The 'Wiggle' */
+.rotate-left { transform: rotate(-2deg); }
+.rotate-right { transform: rotate(3deg); }
+.rotate-slight { transform: rotate(1deg); }
+
+.shift-down { margin-top: 50px; }
+.shift-up { margin-top: -20px; }
+
+/* Soft, Organic Colors */
+.note-blue { background-color: #eef7ff; color: #4a6fa5; }
+.note-yellow { background-color: #fffdf0; color: #8a7d32; }
+.note-pink { background-color: #fff0f5; color: #a54a6f; }
+.note-green { background-color: #f0fff4; color: #4a8a5f; }
+
+/* Interaction: Make them feel alive */
+.thought-item:hover {
+  transform: scale(1.05) rotate(0deg); /* Straightens out when you look at it */
+  cursor: pointer;
+}
 
