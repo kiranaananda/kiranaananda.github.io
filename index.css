@@ -2652,6 +2652,27 @@ textarea.w-input, textarea.w-select {
 
 .exp-bullets li { margin-bottom: 8px; line-height: 1.5; }
 
+.pill {
+  display: inline-block;
+  padding: 8px 16px;
+  margin: 5px;
+  border-radius: 50px;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  cursor: default;
+  border: 1px solid #eee;
+}
+
+.pill:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.quant { background-color: #e3f2fd; color: #1976d2; } /* Soft Blue */
+.qual { background-color: #f1f8e9; color: #388e3c; }  /* Soft Green */
+.tool { background-color: #fff3e0; color: #f57c00; }  /* Soft Orange */
+
 /* Mobile View */
 @media (max-width: 600px) {
   .experience-card { flex-direction: column; gap: 10px; }
