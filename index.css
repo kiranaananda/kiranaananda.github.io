@@ -88,6 +88,7 @@ button, html input[type="button"], input[type="reset"] { -webkit-appearance: but
   position: relative;
   background: #dddddd;
   z-index: 1000;
+  overflow: visible !important;
 }
 
 /* 2. Clear Floats */
@@ -102,8 +103,12 @@ button, html input[type="button"], input[type="reset"] { -webkit-appearance: but
 
 /* 3. The Menu List */
 .w-nav-menu {
-  float: right;
-  position: relative;
+ display: block !important;
+ position: relative !important;
+ background-color: transparent !important;
+ padding: 20px 0;
+ height: auto !important;
+ opacity: 1 !important;
 }
 
 /* 4. The Button */
@@ -131,14 +136,16 @@ button, html input[type="button"], input[type="reset"] { -webkit-appearance: but
 
 /* 6. The Overlay */
 .w-nav-overlay {
-  position: absolute;
-  overflow: hidden;
-  display: none;
-  top: 100%;
-  left: 0;
-  right: 0;
-  width: 100%;
-  z-index: 900;
+ display: block !important; 
+ height: auto !important;
+ min-height: 50vh;
+ position: absolute !important;
+ top: 100%;
+ left: 0;
+ right: 0;
+ background-color: #ffffff !important;
+ z-index: 1000 !important;
+ border-bottom: 1px solid #ddd;
 }
 
 /* --- Hamburger Icon --- */
@@ -676,6 +683,9 @@ button, html input[type="button"], input[type="reset"] { -webkit-appearance: but
     max-width: 100%;
     margin-bottom: 40px;
     padding: 0 15px;
+  }
+  .w-nav-overlay {
+    display: none !important;
   }
 }
 
