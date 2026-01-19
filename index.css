@@ -15,9 +15,9 @@ body {
   font-weight: 500;
   min-height: 100%;
   color: #333;
-  background-color: #fff;
+  background-color: #fffff;
   font-size: 1rem;
-  line-height: 1.5;
+  line-height: 1.2;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -95,7 +95,7 @@ button, html input[type="button"], input[type="reset"] { -webkit-appearance: but
   width: 100%;
 }
 
-.container, .navbar-top {
+.navbar-top {
   display: flex !important;
   justify-content: space-between;
   align-items: center;
@@ -136,7 +136,6 @@ button, html input[type="button"], input[type="reset"] { -webkit-appearance: but
   align-items: center;
   justify-content: center;
   
-  background-color: #ffffff;
   border-radius: 100px; /* Pill Shape */
   padding: 8px 20px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
@@ -169,7 +168,7 @@ button, html input[type="button"], input[type="reset"] { -webkit-appearance: but
   margin: 0 5px;
 }
 
-/* We hide these to stop the hamburger from ever appearing */
+/* Hide these to stop the hamburger from ever appearing */
 .w-nav-button, 
 .w-nav-overlay {
   display: none !important;
