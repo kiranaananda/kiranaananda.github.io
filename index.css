@@ -90,7 +90,7 @@ button, html input[type="button"], input[type="reset"] { -webkit-appearance: but
 /* --- 1. Base Structure (The Shell) --- */
 .w-nav {
   position: relative;
-  background: #dddddd;
+  background: #ffffff;
   z-index: 1000;
   width: 100%;
 }
@@ -204,8 +204,8 @@ button, html input[type="button"], input[type="reset"] { -webkit-appearance: but
   
   /* Safety for very small screens (iPhone SE) */
   @media screen and (max-width: 360px) {
-    .navbar-brand h6 { font-size: 14px; }
-    .nav-link, .nav-link-accent { font-size: 12px; padding: 4px 6px; }
+    .navbar-brand h6 { font-size: 12px; }
+    .nav-link, .nav-link-accent { font-size: 10px; padding: 4px 6px; }
   }
 }
 
