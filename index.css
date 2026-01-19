@@ -1,5 +1,5 @@
 /* ==========================================================================
-   1. GLOBAL RESETS & TYPOGRAPHY
+   1. GLOBAL & TYPOGRAPHY
    ========================================================================== */
 
 html {
@@ -153,14 +153,34 @@ button, html input[type="button"], input[type="reset"] { -webkit-appearance: but
   .w-container { max-width: 728px; }
   .w-nav[data-collapse="medium"] .w-nav-menu { display: none; }
   .w-nav[data-collapse="medium"] .w-nav-button { display: block; }
+  .hero-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+  .hero-split {
+    max-width: 100%;
+    margin-bottom: 40px;
+  }
 }
 
 @media screen and (max-width: 767px) {
   .w-nav-brand { padding-left: 10px; }
+   .resume-row {
+    flex-direction: column;
+  }
+  .resume-side {
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: left;
+  }
 }
 
 @media screen and (max-width: 479px) {
   .w-container { max-width: none; }
+  .navbar-logo-left-container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 
 /* ==========================================================================
