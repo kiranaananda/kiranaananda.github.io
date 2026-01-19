@@ -88,7 +88,7 @@ button, html input[type="button"], input[type="reset"] { -webkit-appearance: but
   background: #dddddd;
   z-index: 1000;
 }
-.w-nav:before, .w-nav:after { content: " "; display: table; grid-area: 1 / 1 / 2 / 2; }
+.w-nav:before, .w-nav:after { content: " "; grid-area: 1 / 1 / 2 / 2; display: table; }
 .w-nav:after { clear: both; }
 
 .w-nav-brand {
@@ -98,20 +98,10 @@ button, html input[type="button"], input[type="reset"] { -webkit-appearance: but
   color: #333333;
 }
 
-.w-nav-link {
+.w-nav-menu {
   position: relative;
-  display: inline-block;
-  vertical-align: top;
-  text-decoration: none;
-  color: #222222;
-  padding: 20px;
-  text-align: left;
-  margin-left: auto;
-  margin-right: auto;
+  float: right;
 }
-.w-nav-link.w--current { color: #0082f3; }
-
-.w-nav-menu { position: relative; float: right; }
 
 .w-nav-button {
   position: relative;
@@ -120,11 +110,15 @@ button, html input[type="button"], input[type="reset"] { -webkit-appearance: but
   font-size: 24px;
   display: none;
   cursor: pointer;
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
-  tap-highlight-color: rgba(0,0,0,0);
+  -webkit-tap-highlight-color: transparent;
   user-select: none;
 }
 .w-nav-button:focus { outline: 0; }
+
+.w-nav-button.w--open {
+  background-color: #c8c8c8;
+  color: #fff;
+}
 
 .w-nav-overlay {
   position: absolute;
@@ -134,6 +128,20 @@ button, html input[type="button"], input[type="reset"] { -webkit-appearance: but
   left: 0;
   right: 0;
   width: 100%;
+}
+
+/* The Menu List - WHEN OPENED */
+[data-nav-menu-open] {
+  display: block !important;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #ffffff;
+  text-align: center;
+  overflow: visible;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
 }
 
 /* --- Buttons --- */
