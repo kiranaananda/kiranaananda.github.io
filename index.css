@@ -149,41 +149,6 @@ button, html input[type="button"], input[type="reset"] { -webkit-appearance: but
   border-radius: 0;
 }
 
-/* --- Media Queries (Navbar responsiveness) --- */
-@media screen and (max-width: 991px) {
-  .w-container { max-width: 728px; }
-  .w-nav[data-collapse="medium"] .w-nav-menu { display: none; }
-  .w-nav[data-collapse="medium"] .w-nav-button { display: block; }
-  .hero-wrapper {
-    flex-direction: column;
-    align-items: center;
-  }
-  .hero-split {
-    max-width: 100%;
-    margin-bottom: 40px;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .w-nav-brand { padding-left: 10px; }
-   .resume-row {
-    flex-direction: column;
-  }
-  .resume-side {
-    width: 100%;
-    margin-bottom: 20px;
-    text-align: left;
-  }
-}
-
-@media screen and (max-width: 479px) {
-  .w-container { max-width: none; }
-  .navbar-logo-left-container {
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-}
-
 /* ==========================================================================
    3. CUSTOM PAGE STYLES
    ========================================================================== */
@@ -596,4 +561,85 @@ button, html input[type="button"], input[type="reset"] { -webkit-appearance: but
   .footer-nav-divider-item {
     display: none; /* Hides divider on mobile for a cleaner look */
   }
+}
+
+/* =========================================
+   5. MOBILE RESPONSIVENESS
+   ========================================= */
+
+/* =========================================
+   RESPONSIVENESS & MEDIA QUERIES
+   ========================================= */
+
+/* --- TABLET & BELOW (max-width: 991px) --- */
+@media screen and (max-width: 991px) {
+  /* Fix Containers */
+  .w-container, .container { 
+    max-width: 728px; 
+  }
+
+  /* Webflow Nav Mechanics */
+  .w-nav[data-collapse="medium"] .w-nav-menu { display: none; }
+  .w-nav[data-collapse="medium"] .w-nav-button { display: block; }
+
+  /* Hero Section: Stack on Tablet so it doesn't look cramped */
+  .hero-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .hero-split {
+    max-width: 100%;
+    margin-bottom: 40px;
+    padding: 0 15px;
+  }
+}
+
+/* --- MOBILE LANDSCAPE (max-width: 767px) --- */
+@media screen and (max-width: 767px) {
+
+  .w-nav-brand { 
+     padding-left: 10px; 
+  }
+  
+  .resume-row {
+    display: flex;
+    flex-direction: column;
+  }
+  .resume-side {
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: left;
+    border-right: none;
+  }
+  .resume-main {
+    width: 100%;
+  }
+
+  .features-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
+/* --- MOBILE PORTRAIT (max-width: 479px) --- */
+@media screen and (max-width: 479px) {
+
+  .w-container, .container { 
+    max-width: none; 
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+
+  .navbar-logo-left-container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.75rem; }
 }
