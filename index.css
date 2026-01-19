@@ -633,6 +633,27 @@ button, html input[type="button"], input[type="reset"] { -webkit-appearance: but
 
 /* --- TABLET & BELOW (max-width: 991px) --- */
 @media screen and (max-width: 991px) {
+  .w-nav-menu[data-nav-menu-open] {
+    display: block !important;
+    height: auto !important;
+    position: absolute !important;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #ffffff !important;
+    border-top: 1px solid #eee;
+    z-index: 2500 !important;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    padding: 20px;
+    text-align: center;
+  }
+
+  .nav-menu-two {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+   
   .w-container, .container { 
     max-width: 728px; 
   }
@@ -643,17 +664,6 @@ button, html input[type="button"], input[type="reset"] { -webkit-appearance: but
   
   .w-nav-menu {
     display: none; 
-  }
-  
-  .w-nav-menu[data-nav-menu-open] {
-    display: block !important;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background: #fff;
-    padding-bottom: 20px;
-    z-index: 2000;
   }
 
   .hero-wrapper {
