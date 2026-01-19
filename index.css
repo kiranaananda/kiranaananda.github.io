@@ -141,6 +141,26 @@ button, html input[type="button"], input[type="reset"] { -webkit-appearance: but
   z-index: 900;
 }
 
+/* --- Hamburger Icon --- */
+
+.w-icon-nav-menu {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.w-icon-nav-menu:before {
+  content: '\2630';
+  font-size: 28px;
+  color: #333;
+}
+
+.w-nav-button.w--open .w-icon-nav-menu:before {
+  content: '\2715';
+  color: #fff;
+}
+
 /* --- Buttons --- */
 .w-button {
   display: inline-block;
@@ -182,8 +202,10 @@ button, html input[type="button"], input[type="reset"] { -webkit-appearance: but
   align-items: center;
   display: flex;
 }
-.navbar-brand {
-  padding-left: 0;
+.navbar-brand, .w-nav-brand {
+  text-decoration: none !important;
+  color: #1a1a1a !important;
+  float: left;
 }
 .nav-menu-wrapper {
   background-color: rgba(0, 0, 0, 0);
