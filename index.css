@@ -649,23 +649,41 @@ button, html input[type="button"], input[type="reset"] { -webkit-appearance: but
   }
 
   .nav-menu-two {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+   display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 10px !important;
+    
+    background-color: #ffffff !important;
+    border-radius: 100px !important; 
+    padding: 8px 20px !important;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05) !important;
   }
    
   .w-container, .container { 
     max-width: 728px; 
   }
-
+   .container, .navbar-top {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    height: auto !important;
+  }
   .w-nav-button {
-    display: block;
+    display: none;
   }
   
-  .w-nav-menu {
-    display: none; 
+  .w-nav-menu { 
+    display: block !important;
+    position: static !important;
+    background: transparent !important;
+    width: auto !important;
+    height: auto !important;
+    overflow: visible !important;
   }
-
+  .w-nav-overlay {
+    display: none !important;
+  }
   .hero-wrapper {
     display: flex;
     flex-direction: column;
