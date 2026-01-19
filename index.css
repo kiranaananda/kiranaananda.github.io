@@ -633,57 +633,58 @@ button, html input[type="button"], input[type="reset"] { -webkit-appearance: but
 
 /* --- TABLET & BELOW (max-width: 991px) --- */
 @media screen and (max-width: 991px) {
-  .w-nav-menu[data-nav-menu-open] {
-    display: block !important;
-    height: auto !important;
-    position: absolute !important;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background-color: #ffffff !important;
-    border-top: 1px solid #eee;
-    z-index: 2500 !important;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-    padding: 20px;
-    text-align: center;
-  }
-
-  .nav-menu-two {
-   display: flex !important;
-    flex-direction: row !important;
-    align-items: center !important;
-    gap: 10px !important;
-    
-    background-color: #ffffff !important;
-    border-radius: 100px !important; 
-    padding: 8px 20px !important;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05) !important;
-  }
+  
+   /* --- nav --- */
    
-  .w-container, .container { 
-    max-width: 728px; 
-  }
-   .container, .navbar-top {
+  .container, .navbar-top {
     display: flex !important;
     justify-content: space-between !important;
     align-items: center !important;
+    position: relative;
     height: auto !important;
   }
-  .w-nav-button {
-    display: none;
-  }
-  
-  .w-nav-menu { 
-    display: block !important;
-    position: static !important;
-    background: transparent !important;
-    width: auto !important;
-    height: auto !important;
-    overflow: visible !important;
-  }
-  .w-nav-overlay {
+   
+  .w-nav-button, .w-nav-overlay {
     display: none !important;
   }
+
+  .w-nav-menu {
+    display: block !important;
+    width: auto !important;
+    background: transparent !important;
+    position: static !important;
+    margin-left: auto !important;
+  }
+
+  .nav-menu-two {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 0px !important;
+    
+    background-color: #ffffff !important;
+    border-radius: 100px !important;
+    padding: 5px 20px !important;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08) !important;
+    border: 1px solid rgba(0,0,0,0.03);
+  }
+
+  .nav-link, .nav-link-accent {
+    font-size: 14px !important;
+    padding: 8px 12px !important;
+    color: #1a1a1a !important;
+    font-weight: 500 !important;
+    white-space: nowrap !important;
+  }
+  .nav-divider {
+    display: block !important;
+    width: 1px !important;
+    height: 16px !important;
+    background-color: #e0e0e0 !important;
+    margin: 0 5px !important;
+  }
+/* --- hero --- */
+   
   .hero-wrapper {
     display: flex;
     flex-direction: column;
@@ -738,6 +739,7 @@ button, html input[type="button"], input[type="reset"] { -webkit-appearance: but
   .resume-main { width: 100%; }
 
   /* --- 2. Menu Styling --- */
+   
   .nav-menu-two {
     flex-direction: column;
     padding-bottom: 30px;
@@ -783,4 +785,8 @@ button, html input[type="button"], input[type="reset"] { -webkit-appearance: but
   h1 { font-size: 2rem; }
   h2 { font-size: 1.75rem; }
   h4 { font-size: 1.5rem; }
+  .navbar-brand h6 { font-size: 16px !important; } /* Smaller Logo */
+  .nav-menu-two { padding: 5px 12px !important; } /* Tighter Pill */
+  .nav-link, .nav-link-accent { padding: 6px 8px !important; font-size: 13px !important; }
+  }
 }
