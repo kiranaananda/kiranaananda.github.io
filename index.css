@@ -55,18 +55,6 @@ button, html input[type="button"], input[type="reset"] { -webkit-appearance: but
   font-weight: normal;
   font-style: normal;
 }
-[class^="w-icon-"], [class*=" w-icon-"] {
-  speak: none;
-  font-family: webflow-icons !important;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-.w-icon-nav-menu:before { content: "⋯"; }
 
 /* --- Layout Utilities --- */
 .w-container {
@@ -82,85 +70,6 @@ button, html input[type="button"], input[type="reset"] { -webkit-appearance: but
 .w-list-unstyled { padding-left: 0; list-style: none; }
 .w-hidden { display: none; }
 
-/* --- Navbar --- */
-/* 1. Main Navbar Bar */
-.w-nav {
-  position: relative;
-  background: #dddddd;
-  z-index: 1000;
-}
-
-/* 2. Clear Floats */
-.w-nav:before, .w-nav:after {
-  content: " ";
-  display: table;
-  grid-area: 1 / 1 / 2 / 2;
-}
-.w-nav:after {
-  clear: both;
-}
-
-/* 3. The Menu List */
-.w-nav-menu {
-  float: right;
-  position: relative;
-}
-
-/* 4. The Button */
-.w-nav-button {
-  float: right;
-  padding: 18px;
-  font-size: 24px;
-  display: none;
-  cursor: pointer;
-  -webkit-tap-highlight-color: transparent;
-  user-select: none;
-  position: relative; 
-  z-index: 2000;
-}
-
-.w-nav-button:focus {
-  outline: 0;
-}
-
-/* 5. The Active State */
-.w-nav-button.w--open {
-  background-color: #c8c8c8;
-  color: #fff;
-}
-
-/* 6. The Overlay */
-.w-nav-overlay {
-  position: absolute;
-  overflow: hidden;
-  display: none;
-  top: 100%;
-  left: 0;
-  right: 0;
-  width: 100%;
-  z-index: 900;
-}
-
-/* --- Hamburger Icon --- */
-
-.w-icon-nav-menu {
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.w-icon-nav-menu:before {
-  content: '\2630';
-  font-size: 28px;
-  color: #333;
-}
-
-.w-nav-button.w--open .w-icon-nav-menu:before {
-  content: '\2715';
-  color: #fff;
-}
-
 /* --- Buttons --- */
 .w-button {
   display: inline-block;
@@ -175,86 +84,132 @@ button, html input[type="button"], input[type="reset"] { -webkit-appearance: but
 }
 
 /* ==========================================================================
-   3. CUSTOM PAGE STYLES
+   3. NAVBAR SYSTEM
    ========================================================================== */
 
-/* --- Navigation --- */
-.navbar-logo-left {
-}
-.navbar-logo-left-container {
-  z-index: 5;
-  width: 1030px;
-  max-width: 100%;
-  background-color: rgba(0, 0, 0, 0);
-  margin-left: auto;
-  margin-right: auto;
-  padding: 15px 20px;
-}
-.shadow-three {
+/* --- 1. Base Structure (The Shell) --- */
+.w-nav {
+  position: relative;
+  background: #dddddd;
+  z-index: 1000;
   width: 100%;
-  max-width: 1140px;
-  margin-bottom: 0;
-  padding-top: 20px;
-  padding-bottom: 20px;
 }
-.navbar-top {
+
+.container, .navbar-top {
+  display: flex !important;
   justify-content: space-between;
   align-items: center;
-  display: flex;
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 15px 20px;
+  box-sizing: border-box;
 }
+
+/* --- 2. The Logo --- */
+
 .navbar-brand, .w-nav-brand {
-  text-decoration: none !important;
-  color: #1a1a1a !important;
-  float: left;
-}
-.nav-menu-wrapper {
-  background-color: rgba(0, 0, 0, 0);
-}
-.nav-menu-two {
-  background-color: #fff;
-  border-radius: 50px;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
-  margin-top: 10px;
-  padding: 20px;
-  display: flex;
-  box-shadow: 0 8px 50px rgba(0, 0, 0, .05);
-}
-.nav-link {
-  color: #1a1b1f;
-  letter-spacing: .25px;
-  margin-left: 5px;
-  margin-right: 5px;
-  padding: 5px 10px;
-  line-height: 20px;
   text-decoration: none;
-}
-.nav-divider {
-  width: 1px;
-  height: 22px;
-  background-color: #e4ebf3;
-  margin-left: 15px;
+  color: #1a1a1a;
+  flex-shrink: 1;
   margin-right: 15px;
-  width: 1px;
-  height: 20px;
-  background-color: #ccc;
-  max-width: 100%;
-  margin-top: 10px;
-  margin-bottom: 10px;
 }
-.nav-link-accent {
+
+.navbar-brand h6 {
+  margin: 0;
+  line-height: 1.2;
+  white-space: nowrap;
+  font-size: 20px;
+}
+
+/* --- 3. The Menu Container (The Right Side) --- */
+.w-nav-menu {
+  display: block !important;
+  position: static !important;
+  background: transparent !important;
+}
+
+/* --- 4. The "Pill" Design (White Box) --- */
+.nav-menu-two {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  
+  background-color: #ffffff;
+  border-radius: 100px; /* Pill Shape */
+  padding: 8px 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0,0,0,0.03);
+  gap: 5px;
+}
+
+/* --- 5. The Links --- */
+.nav-link, .nav-link-accent {
   color: #1a1b1f;
-  letter-spacing: .25px;
-  margin-left: 5px;
-  margin-right: 20px;
-  padding: 5px 10px;
-  line-height: 20px;
   text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0.25px;
+  padding: 8px 12px;
+  white-space: nowrap;
+  transition: opacity 0.2s ease;
 }
-.menu-button {
-  padding: 12px;
+
+.nav-link:hover, .nav-link-accent:hover {
+  opacity: 0.7;
 }
+
+/* --- 6. The Vertical Divider --- */
+.nav-divider {
+  display: block;
+  width: 1px;
+  height: 16px;
+  background-color: #e0e0e0;
+  margin: 0 5px;
+}
+
+/* We hide these to stop the hamburger from ever appearing */
+.w-nav-button, 
+.w-nav-overlay {
+  display: none !important;
+}
+
+/* =========================================
+   RESPONSIVE TWEAKS (Mobile Only)
+   ========================================= */
+
+@media screen and (max-width: 767px) {
+  
+  /* Reduce padding on the main bar */
+  .container, .navbar-top {
+    padding: 10px 15px;
+  }
+
+  /* Shrink Logo text */
+  .navbar-brand h6 {
+    font-size: 16px;
+  }
+
+  /* Shrink the Pill container */
+  .nav-menu-two {
+    padding: 6px 15px;
+  }
+
+  /* Shrink Link text and spacing */
+  .nav-link, .nav-link-accent {
+    font-size: 13px;
+    padding: 5px 8px;
+  }
+  
+  /* Safety for very small screens (iPhone SE) */
+  @media screen and (max-width: 360px) {
+    .navbar-brand h6 { font-size: 14px; }
+    .nav-link, .nav-link-accent { font-size: 12px; padding: 4px 6px; }
+  }
+}
+
+
 /* ==========================================================================
    3a. HERO SECTION STYLES
    ========================================================================== */
@@ -633,56 +588,8 @@ button, html input[type="button"], input[type="reset"] { -webkit-appearance: but
 
 /* --- TABLET & BELOW (max-width: 991px) --- */
 @media screen and (max-width: 991px) {
-  
-   /* --- nav --- */
    
-  .container, .navbar-top {
-    display: flex !important;
-    justify-content: space-between !important;
-    align-items: center !important;
-    position: relative;
-    height: auto !important;
-  }
-   
-  .w-nav-button, .w-nav-overlay {
-    display: none !important;
-  }
 
-  .w-nav-menu {
-    display: block !important;
-    width: auto !important;
-    background: transparent !important;
-    position: static !important;
-    margin-left: auto !important;
-  }
-
-  .nav-menu-two {
-    display: flex !important;
-    flex-direction: row !important;
-    align-items: center !important;
-    gap: 0px !important;
-    
-    background-color: #ffffff !important;
-    border-radius: 100px !important;
-    padding: 5px 20px !important;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08) !important;
-    border: 1px solid rgba(0,0,0,0.03);
-  }
-
-  .nav-link, .nav-link-accent {
-    font-size: 14px !important;
-    padding: 8px 12px !important;
-    color: #1a1a1a !important;
-    font-weight: 500 !important;
-    white-space: nowrap !important;
-  }
-  .nav-divider {
-    display: block !important;
-    width: 1px !important;
-    height: 16px !important;
-    background-color: #e0e0e0 !important;
-    margin: 0 5px !important;
-  }
 /* --- hero --- */
    
   .hero-wrapper {
@@ -701,7 +608,7 @@ button, html input[type="button"], input[type="reset"] { -webkit-appearance: but
 /* --- MOBILE LANDSCAPE (max-width: 767px) --- */
 @media screen and (max-width: 767px) {
 
-   /* Hero Stacking */
+/* --- hero --- */
   .hero-without-image { padding: 60px 15px; }
   .hero-wrapper {
     display: flex;
@@ -716,14 +623,14 @@ button, html input[type="button"], input[type="reset"] { -webkit-appearance: but
     padding: 0 15px;
   }
 
-  /* Features Grid Stacking */
+/* --- feature cards --- */
   .features-grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: 30px;
   }
 
-  /* Resume Stacking */
+/* --- resume --- */
   .resume-row {
     display: flex;
     flex-direction: column;
@@ -736,45 +643,11 @@ button, html input[type="button"], input[type="reset"] { -webkit-appearance: but
   }
   .resume-main { width: 100%; }
 
-  /* Menu Styling */
-   
-  .w-nav-brand { padding-left: 0; }
-  .navbar-logo-left-container { max-width: 100%; } 
-  .container, .navbar-top {
-    flex-wrap: nowrap !important; 
-    gap: 10px !important;
-  }
-  .navbar-brand h6 {
-    font-size: 18px !important;
-  }
-
-  .nav-menu-two {
-    padding: 5px 15px !important;
-  }
-  
-  .nav-link, .nav-link-accent {
-    font-size: 13px !important;
-  }
 }
 
 /* --- MOBILE PORTRAIT (max-width: 479px) --- */
 @media screen and (max-width: 479px) {
   .container, .w-container {
     max-width: none;
-  }
-
-  /* 2. Navbar */
-  .navbar-logo-left-container {
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-
-  /* 3. Typography */
-  h1 { font-size: 2rem; }
-  h2 { font-size: 1.75rem; }
-  h4 { font-size: 1.5rem; }
-  .navbar-brand h6 { font-size: 16px !important; } /* Smaller Logo */
-  .nav-menu-two { padding: 5px 12px !important; } /* Tighter Pill */
-  .nav-link, .nav-link-accent { padding: 6px 8px !important; font-size: 13px !important; }
   }
 }
