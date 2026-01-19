@@ -83,28 +83,31 @@ button, html input[type="button"], input[type="reset"] { -webkit-appearance: but
 .w-hidden { display: none; }
 
 /* --- Navbar --- */
+/* 1. Main Navbar Bar */
 .w-nav {
   position: relative;
   background: #dddddd;
   z-index: 1000;
 }
-.w-nav:before, .w-nav:after { content: " "; grid-area: 1 / 1 / 2 / 2; display: table; }
-.w-nav:after { clear: both; }
 
-.w-nav-brand {
-  position: relative;
-  float: left;
-  text-decoration: none;
-  color: #333333;
+/* 2. Clear Floats */
+.w-nav:before, .w-nav:after {
+  content: " ";
+  display: table;
+  grid-area: 1 / 1 / 2 / 2;
+}
+.w-nav:after {
+  clear: both;
 }
 
+/* 3. The Menu List */
 .w-nav-menu {
-  position: relative;
   float: right;
+  position: relative;
 }
 
+/* 4. The Button */
 .w-nav-button {
-  position: relative;
   float: right;
   padding: 18px;
   font-size: 24px;
@@ -112,14 +115,21 @@ button, html input[type="button"], input[type="reset"] { -webkit-appearance: but
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
   user-select: none;
+  position: relative; 
+  z-index: 2000;
 }
-.w-nav-button:focus { outline: 0; }
 
+.w-nav-button:focus {
+  outline: 0;
+}
+
+/* 5. The Active State */
 .w-nav-button.w--open {
   background-color: #c8c8c8;
   color: #fff;
 }
 
+/* 6. The Overlay */
 .w-nav-overlay {
   position: absolute;
   overflow: hidden;
@@ -128,20 +138,7 @@ button, html input[type="button"], input[type="reset"] { -webkit-appearance: but
   left: 0;
   right: 0;
   width: 100%;
-}
-
-/* The Menu List - WHEN OPENED */
-[data-nav-menu-open] {
-  display: block !important;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  right: 0;
-  background: #ffffff;
-  text-align: center;
-  overflow: visible;
-  padding-bottom: 20px;
-  border-bottom: 1px solid #eee;
+  z-index: 900;
 }
 
 /* --- Buttons --- */
@@ -618,8 +615,24 @@ button, html input[type="button"], input[type="reset"] { -webkit-appearance: but
     max-width: 728px; 
   }
 
-  .w-nav[data-collapse="medium"] .w-nav-menu { display: none; }
-  .w-nav[data-collapse="medium"] .w-nav-button { display: block; }
+  .w-nav-button {
+    display: block;
+  }
+  
+  .w-nav-menu {
+    display: none; 
+  }
+  
+  .w-nav-menu[data-nav-menu-open] {
+    display: block !important;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #fff;
+    padding-bottom: 20px;
+    z-index: 2000;
+  }
 
   .hero-wrapper {
     display: flex;
