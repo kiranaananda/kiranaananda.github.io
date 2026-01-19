@@ -700,10 +700,8 @@ button, html input[type="button"], input[type="reset"] { -webkit-appearance: but
 
 /* --- MOBILE LANDSCAPE (max-width: 767px) --- */
 @media screen and (max-width: 767px) {
-  .w-nav-brand { padding-left: 0; }
-  .navbar-logo-left-container { max-width: 100%; }
 
-  /* Hero Stacking */
+   /* Hero Stacking */
   .hero-without-image { padding: 60px 15px; }
   .hero-wrapper {
     display: flex;
@@ -738,34 +736,24 @@ button, html input[type="button"], input[type="reset"] { -webkit-appearance: but
   }
   .resume-main { width: 100%; }
 
-  /* --- 2. Menu Styling --- */
+  /* Menu Styling */
    
+  .w-nav-brand { padding-left: 0; }
+  .navbar-logo-left-container { max-width: 100%; } 
+  .container, .navbar-top {
+    flex-wrap: nowrap !important; 
+    gap: 10px !important;
+  }
+  .navbar-brand h6 {
+    font-size: 18px !important;
+  }
+
   .nav-menu-two {
-    flex-direction: column;
-    padding-bottom: 30px;
-    border-radius: 20px;
-    /* Ensure background matches overlay if needed */
+    padding: 5px 15px !important;
   }
-
-  .nav-link {
-    display: inline-block;
-    padding-top: 10px;
-    padding-bottom: 10px;
-  }
-
-  .nav-link-accent {
-    display: inline-block;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    margin-right: 5px;
-  }
-
-  .nav-divider {
-    /* Transforms the divider for vertical layout */
-    width: 100%; /* Changed from 1px to 100% so it's a horizontal line */
-    height: 1px; /* Thin line */
-    background-color: #eee;
-    margin: 10px 0;
+  
+  .nav-link, .nav-link-accent {
+    font-size: 13px !important;
   }
 }
 
