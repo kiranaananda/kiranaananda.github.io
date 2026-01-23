@@ -63,6 +63,19 @@ button, html input[type="button"], input[type="reset"] { -webkit-appearance: but
   background-color: #43464d;
 }
 
+  .highlight-word {
+    background: linear-gradient(120deg, #FFF7AE 0%, #CDE7FF 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 0.2em; /* Underline only */
+    background-position: 0 88%;
+    transition: background-size 0.25s ease-in;
+    cursor: default;
+  }
+
+  .highlight-word:hover {
+    background-size: 100% 88%; /* Fills up like a highlighter */
+  }
+
 /* ==========================================================================
    2. REQUIRED WEBFLOW COMPONENTS
    ========================================================================== */
