@@ -490,46 +490,49 @@ button, html input[type="button"], input[type="reset"] { -webkit-appearance: but
    3c. THOUGHT CLOUD STYLES
    ========================================================================== */
 
-.thought-cloud-section {
-  background-color: #f5f7fa;
-}
-.thought-container {
-  background-color: #f5f7fa;
-  max-width: 900px;
+/* The Container for the "Stack" */
+.sticky-stack-container {
+  padding: 4rem 0 20rem 0; /* Extra bottom padding to scroll past the last card */
+  max-width: 1000px;
   margin: 0 auto;
-  padding: 60px 20px;
-  text-align: center;
 }
 
-.thought-item {
-  display: inline-block;
-  padding: 30px;
-  margin: 15px;
-  max-width: 300px;
-  border-radius: 40px 10px 40px 10px; 
-  font-family: 'Playpen Sans', cursive;
-  line-height: 1.4;
-  box-shadow: 5px 5px 15px rgba(0,0,0,0.05);
-  transition: transform 0.3s ease;
+/* The Individual Cards */
+.sticky-card {
+  position: -webkit-sticky; /* For Safari */
+  position: sticky;         /* The Magic Property */
+  
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 -4px 20px rgba(0,0,0,0.1); /* Shadow pointing UP to separate cards */
+  margin-bottom: 4rem;      /* Space between them in the flow */
+  border: 1px solid #eee;
+  
+  /* Layout inside the card */
+  display: flex;
+  align-items: center;
+  gap: 2rem;
 }
 
-/* Personality Classes: The 'Wiggle' */
-.rotate-left { transform: rotate(-2deg); }
-.rotate-right { transform: rotate(3deg); }
-.rotate-slight { transform: rotate(1deg); }
-
-.shift-down { margin-top: 50px; }
-.shift-up { margin-top: -20px; }
-
-.note-blue { background-color: #eef7ff; color: #4a6fa5; }
-.note-yellow { background-color: #fffdf0; color: #8a7d32; }
-.note-pink { background-color: #fff0f5; color: #a54a6f; }
-.note-green { background-color: #f0fff4; color: #4a8a5f; }
-
-.thought-item:hover {
-  transform: scale(1.05) rotate(0deg);
-  cursor: pointer;
+/* IMAGE STYLING */
+.sticky-card svg {
+  width: 250px;
+  height: 250px;
+  object-fit: contain;
+  border-radius: 8px;
 }
+
+/* MOBILE FIX: Turn off sticky on phones (it takes up too much space) */
+@media (max-width: 768px) {
+  .sticky-card {
+    position: relative;
+    top: auto !important;
+    left: auto !important;
+    margin-left: 0 !important;
+  }
+}
+
 
 /* ==========================================================================
    4. FOOTER STYLES
