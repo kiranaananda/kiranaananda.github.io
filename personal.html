@@ -192,6 +192,42 @@
     </nav>
   </div>
 </div>
+    
+    <script>
+  // 1. Select all the text steps and all the images
+  const steps = document.querySelectorAll('.step');
+  const images = document.querySelectorAll('.sticky-img');
+
+  // 2. Create the Observer (The Scroll Watcher)
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      // If a text step enters the screen...
+      if (entry.isIntersecting) {
+        
+        // Remove 'active' from all steps & images
+        steps.forEach(s => s.classList.remove('active-step'));
+        images.forEach(i => i.classList.remove('active-img'));
+
+        // Add 'active' to THIS text step
+        entry.target.classList.add('active-step');
+
+        // Find the matching image (using data-index)
+        const index = entry.target.getAttribute('data-index');
+        const matchingImg = document.getElementById(`img-${index}`);
+        
+        // Show the matching image
+        if (matchingImg) {
+          matchingImg.classList.add('active-img');
+        }
+      }
+    });
+  }, {
+    threshold: 0.5 // Trigger when 50% of the text is visible
+  });
+
+  // 3. Tell the observer to watch every step
+  steps.forEach(step => observer.observe(step));
+</script>
 </body>
 
 
