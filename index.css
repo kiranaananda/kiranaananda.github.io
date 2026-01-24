@@ -289,28 +289,6 @@ button, html input[type="button"], input[type="reset"] { -webkit-appearance: but
   }
 }
 
-.hero-personal {
-  background: linear-gradient(120deg, #FFF7AE 0%, #CDE7FF 100%);
-  background-size: 200% 200%;
-  animation: skyBreath 10s ease infinite; 
-  padding: 80px 30px;
-  position: relative; 
-  color: #333;
-  padding: 4rem 0;
-}
-
-@keyframes skyBreath {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
 /* ==========================================================================
    3b. FEATURES CARD STYLES
    ========================================================================== */
@@ -847,4 +825,115 @@ button, html input[type="button"], input[type="reset"] { -webkit-appearance: but
   .img-stack { height: 300px; margin-bottom: 2rem; }
   .sticky-img { position: relative; opacity: 1; transform: none; display: none; }
   .sticky-img.active-img { display: block; }
+}
+
+/* ==========================================================================
+   7. ABOUT ME
+   ========================================================================== */
+
+/* --- 1. FULL SCREEN & BACKGROUND --- */
+.personal-intro-section {
+  /* Full screen height */
+  min-height: 100vh;
+  
+  /* Centering logic */
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+  
+  /* The "Sunny Sky" Gradient */
+  background: linear-gradient(120deg, #FFF7AE 0%, #CDE7FF 100%);
+  background-size: 200% 200%;
+  
+  /* Unique Animation Name */
+  animation: personalSkyBreath 10s ease infinite;
+  
+  /* Spacing */
+  padding: 2rem 0;
+  box-sizing: border-box;
+  color: #333;
+}
+
+/* --- 2. LAYOUT --- */
+.personal-wrapper {
+  display: flex;
+  align-items: center; 
+  justify-content: space-between;
+  gap: 4rem; 
+  max-width: 1100px;
+  margin: 0 auto;
+  
+  /* Entrance Animation */
+  animation: personalFadeUp 1.2s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+  opacity: 0; 
+}
+
+/* Text Side */
+.personal-text {
+  flex: 1;
+  max-width: 600px;
+}
+
+.personal-text h4 {
+  margin-bottom: 1rem;
+  /* Add your specific font styles here if needed */
+}
+
+/* Image Side */
+.personal-visual {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.personal-visual img {
+  max-width: 100%;
+  width: 400px; 
+  height: auto;
+  /* Image Bobbing Animation */
+  animation: personalFloat 6s ease-in-out infinite;
+}
+
+/* --- 3. UNIQUE ANIMATIONS --- */
+
+/* Slide Up & Fade In */
+@keyframes personalFadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px); 
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); 
+  }
+}
+
+/* Background Movement */
+@keyframes personalSkyBreath {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Image Float */
+@keyframes personalFloat {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
+}
+
+/* --- MOBILE FIXES --- */
+@media (max-width: 768px) {
+  .personal-intro-section {
+    min-height: auto; /* Allow scrolling on phone */
+    padding: 6rem 1rem;
+  }
+  .personal-wrapper {
+    flex-direction: column-reverse; /* Image Top, Text Bottom */
+    text-align: center;
+    gap: 2rem;
+  }
+  .personal-visual img {
+    width: 250px; /* Smaller image on phone */
+  }
 }
