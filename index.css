@@ -503,47 +503,92 @@ button, html input[type="button"], input[type="reset"] { -webkit-appearance: but
    3c. THOUGHT CLOUD STYLES
    ========================================================================== */
 
-/* The Container for the "Stack" */
+/* --- CONTAINER --- */
 .sticky-stack-container {
-  padding: 4rem 0 20rem 0; /* Extra bottom padding to scroll past the last card */
+  padding: 4rem 0 20rem 0;
   max-width: 1000px;
   margin: 0 auto;
 }
 
-/* The Individual Cards */
+/* --- CARD BASE STYLES --- */
 .sticky-card {
-  position: -webkit-sticky; /* For Safari */
-  position: sticky;         /* The Magic Property */
-  
+  position: sticky;
+  position: -webkit-sticky;
   background: white;
   border-radius: 12px;
   padding: 1.5rem;
-  box-shadow: 0 -4px 20px rgba(0,0,0,0.1); /* Shadow pointing UP to separate cards */
-  margin-bottom: 4rem;      /* Space between them in the flow */
+  box-shadow: 0 -4px 20px rgba(0,0,0,0.1);
+  margin-bottom: 4rem;
   border: 1px solid #eee;
   
   /* Layout inside the card */
   display: flex;
   align-items: center;
   gap: 2rem;
+  
+  /* Smooth transition if window resizes */
+  transition: margin-left 0.3s ease, top 0.3s ease;
 }
 
 /* IMAGE STYLING */
 .sticky-card img {
-  width: 250px;
-  height: 250px;
+  width: 80px; /* Adjusted for icons (was 250px) */
+  height: 80px;
   object-fit: contain;
-  border-radius: 8px;
+  flex-shrink: 0; /* Prevents squishing */
 }
 
-/* MOBILE FIX: Turn off sticky on phones (it takes up too much space) */
+/* TEXT STYLING */
+.sticky-card h6 {
+  margin: 0;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  font-weight: 600;
+  color: #333;
+}
+
+/* --- DESKTOP STAIRCASE (Only on big screens) --- */
+@media (min-width: 769px) {
+  /* 1st Card */
+  .sticky-card:nth-child(1) { top: 100px; margin-left: 0%; }
+  
+  /* 2nd Card */
+  .sticky-card:nth-child(2) { top: 140px; margin-left: 5%; }
+  
+  /* 3rd Card */
+  .sticky-card:nth-child(3) { top: 180px; margin-left: 10%; }
+  
+  /* 4th Card */
+  .sticky-card:nth-child(4) { top: 220px; margin-left: 15%; }
+}
+
+/* --- MOBILE FIX (Phones & Tablets) --- */
 @media (max-width: 768px) {
   .sticky-card {
-    position: relative;
-    top: auto !important;
-    left: auto !important;
-    margin-left: 0 !important;
+    /* 1. Force Full Width */
+    margin-left: 0 !important; 
+    
+    /* 2. Smaller Text & Image */
+    padding: 1.5rem 1rem;
+    gap: 1rem;
+    margin-bottom: 2rem;
   }
+
+  .sticky-card img {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .sticky-card h6 {
+    font-size: 1rem;
+  }
+
+  /* 3. Tighter Stacking on Mobile */
+  /* We squeeze them closer so they fit on a small screen */
+  .sticky-card:nth-child(1) { top: 80px !important; }
+  .sticky-card:nth-child(2) { top: 95px !important; }
+  .sticky-card:nth-child(3) { top: 110px !important; }
+  .sticky-card:nth-child(4) { top: 125px !important; }
 }
 
 
