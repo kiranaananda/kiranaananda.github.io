@@ -289,6 +289,28 @@ button, html input[type="button"], input[type="reset"] { -webkit-appearance: but
   }
 }
 
+.hero-personal {
+  background: linear-gradient(120deg, #FFF7AE 0%, #CDE7FF 100%);
+  background-size: 200% 200%;
+  animation: skyBreath 10s ease infinite; 
+  padding: 80px 30px;
+  position: relative; 
+  color: #333;
+  padding: 4rem 0;
+}
+
+@keyframes skyBreath {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 /* ==========================================================================
    3b. FEATURES CARD STYLES
    ========================================================================== */
@@ -323,28 +345,6 @@ button, html input[type="button"], input[type="reset"] { -webkit-appearance: but
   align-items: center;
   justify-content: center;
   margin-bottom: 24px;
-}
-
-.hero-personal {
-  background: linear-gradient(120deg, #FFF7AE 0%, #CDE7FF 100%);
-  background-size: 200% 200%;
-  animation: skyBreath 10s ease infinite;
-   
-  color: #333;
-  padding: 4rem 0;
-  position: relative;
-}
-
-@keyframes skyBreath {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
 }
 
 /* ==========================================================================
