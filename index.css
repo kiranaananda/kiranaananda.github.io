@@ -947,7 +947,7 @@ button, html input[type="button"], input[type="reset"] { -webkit-appearance: but
 .onion-split-section {
   padding: 1rem 1rem;
   max-width: 1100px;
-  background: #fff;
+  justify-content: center;
 }
 .onion-header { text-align: center; margin-bottom: 3rem; }
 .onion-header h4 { font-family: 'Fredoka', sans-serif; font-size: 2rem; margin-bottom: 0.5rem; color: #333; }
