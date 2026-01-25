@@ -946,11 +946,9 @@ button, html input[type="button"], input[type="reset"] { -webkit-appearance: but
    ========================================= */
 .onion-split-section {
   padding: 1rem 1rem;
-  max-width: 1100px;
-  justify-content: center;
 }
 .onion-header { text-align: center; margin-bottom: 3rem; }
-.onion-header h4 { font-family: 'Fredoka', sans-serif; font-size: 2rem; margin-bottom: 0.5rem; color: #333; }
+.onion-header h4 { font-size: 2rem; margin-bottom: 0.5rem; color: #333; }
 .onion-header p { color: #999; font-size: 0.9rem; }
 
 /* Flexbox Layout (Desktop Default) */
@@ -1015,7 +1013,7 @@ button, html input[type="button"], input[type="reset"] { -webkit-appearance: but
 }
 
 /* Header inside the card */
-.card-header h5 { margin: 0 0 5px 0; color: #333; font-family: 'Fredoka', sans-serif; font-size: 1.2rem; }
+.card-header h5 { margin: 0 0 5px 0; color: #333; font-size: 1.2rem; }
 .card-header p { margin: 0 0 20px 0; font-size: 0.85rem; color: #888; }
 
 
