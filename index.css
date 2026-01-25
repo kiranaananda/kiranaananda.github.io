@@ -947,9 +947,14 @@ button, html input[type="button"], input[type="reset"] { -webkit-appearance: but
 .onion-split-section {
   padding: 1rem 1rem;
 }
+
+.intro-text-wrapper {
+  max-width: 1000px;
+  margin: 0 auto 1rem auto;
+  padding: 0 20px;     /* Small padding prevents edge-touching on mobile */
+}
+
 .onion-header { text-align: center; margin-bottom: 3rem; }
-.onion-header h4 { font-size: 2rem; margin-bottom: 0.5rem; color: #333; }
-.onion-header p { color: #999; font-size: 0.9rem; }
 
 /* Flexbox Layout (Desktop Default) */
 .onion-split-layout {
@@ -975,7 +980,7 @@ button, html input[type="button"], input[type="reset"] { -webkit-appearance: but
 /* Right Side (Data) - WIDER NOW */
 .data-side {
   flex: 1 1 55%; /* Give data side more room */
-  max-width: 500px; /* WIDER BOX (as requested) */
+  max-width: 500px; /* WIDER BOX */
   min-height: 400px; 
   display: flex; 
   align-items: center;
