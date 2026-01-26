@@ -1359,19 +1359,29 @@ input[type="reset"] {
 
   .onion-split-layout {
     flex-direction: column;
-    /* Stack vertically */
+    align-items: center;
     gap: 30px;
   }
 
   .svg-side,
   .data-side {
-    flex: 1 1 auto;
+    flex: 1 1 100;
     width: 100%;
     max-width: 100%;
+    padding: 0 15px;
+    box-sizing: border-box;
   }
 
+  .data-stack-container{
+    width: 100%;
+    margin-top: 20px;
+  }
   .data-side {
     min-height: auto;
+  }
+
+  .data-card{
+    padding: 20px;
   }
 }
 
