@@ -406,6 +406,7 @@ input[type="reset"] {
   margin: 0 auto 30px;
   border-radius: 50%;
   transition: opacity 100ms ease;
+  filter: grayscale(100%);
 
   &:hover {
     .avatar {
