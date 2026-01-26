@@ -1382,6 +1382,7 @@ input[type="reset"] {
 
   .data-card{
     padding: 20px;
+    width: 55%;
   }
 }
 
