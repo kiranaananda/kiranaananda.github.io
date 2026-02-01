@@ -376,7 +376,6 @@ input[type="reset"] {
 /* --- Hero Section --- */
 .hero-without-image {
   background-color: #f5f7fa;
-  border-bottom: 1px solid #e4ebf3;
   padding: 80px 30px;
   position: relative;
 }
