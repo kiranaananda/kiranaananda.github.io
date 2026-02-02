@@ -965,7 +965,7 @@ input[type="reset"] {
   /* The "Sunny Sky" Gradient */
   background: linear-gradient(120deg, #FFF7AE 0%, #CDE7FF 100%);
   background-size: 200% 200%;
-  box-shadow: inset 0 0 120px 60px #ffffff; /* soft glow effect */
+  box-shadow: inset 0 0 120px 100px #ffffff; /* soft glow effect */
 
   /* Unique Animation Name */
   animation: personalSkyBreath 10s ease infinite;
