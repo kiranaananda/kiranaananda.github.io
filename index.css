@@ -871,7 +871,7 @@ input[type="reset"] {
   position: relative;
   width: 100%;
   height: 400px;
-  /* Max height for images */
+  animation: personalFloat 6s ease-in-out infinite;
 }
 
 .sticky-img {
