@@ -953,6 +953,28 @@ input[type="reset"] {
    ========================================================================== */
 
 /* --- 1. FULL SCREEN & BACKGROUND --- */
+.frozen-zone-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.sticky-bg-layer {
+  position: sticky;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+    /* The "Sunny Sky" Gradient */
+  background: linear-gradient(120deg, #FFF7AE 0%, #CDE7FF 100%);
+  background-size: 200% 200%;
+  box-shadow: inset 0 0 120px 100px #ffffff; /* soft glow effect */
+
+  /* Unique Animation Name */
+  animation: personalSkyBreath 10s ease infinite;
+  
+  z-index: -1;
+}
+
 .personal-intro-section {
   /* Full screen height */
   min-height: 100vh;
@@ -961,14 +983,6 @@ input[type="reset"] {
   display: flex;
   align-items: center;
   justify-content: center;
-
-  /* The "Sunny Sky" Gradient */
-  background: linear-gradient(120deg, #FFF7AE 0%, #CDE7FF 100%);
-  background-size: 200% 200%;
-  box-shadow: inset 0 0 120px 100px #ffffff; /* soft glow effect */
-
-  /* Unique Animation Name */
-  animation: personalSkyBreath 10s ease infinite;
 
   /* Spacing */
   padding: 2rem 0;
