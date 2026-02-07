@@ -412,39 +412,48 @@
   </div>
 
   <script>
-    // 1. Select all the text steps and all the images
-    const steps = document.querySelectorAll('.step');
-    const images = document.querySelectorAll('.sticky-img');
+    document.addEventListener("DOMContentLoaded", () => {
 
-    // 2. Create the Observer (The Scroll Watcher)
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        // If a text step enters the screen...
-        if (entry.isIntersecting) {
+      const steps = document.querySelectorAll('.step');
+      const images = document.querySelectorAll('.sticky-img');
 
-          // Remove 'active' from all steps & images
-          steps.forEach(s => s.classList.remove('active-step'));
-          images.forEach(i => i.classList.remove('active-img'));
+      // 1. Configure the "Tripwire"
+      const config = {
+        root: null,
+        // This is the magic. It shrinks the "view zone" to a thin line in the middle.
+        // -50% from top, -50% from bottom.
+        rootMargin: '-50% 0px -50% 0px',
+        threshold: 0 // Trigger the MOMENT it touches that center line
+      };
 
-          // Add 'active' to THIS text step
-          entry.target.classList.add('active-step');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          // 2. Logic: Triggers exactly when crossing the center
+          if (entry.isIntersecting) {
 
-          // Find the matching image (using data-index)
-          const index = entry.target.getAttribute('data-index');
-          const matchingImg = document.getElementById(`img-${index}`);
+            // A. Update Text
+            // Clear all active classes first so we don't have duplicates
+            steps.forEach(s => s.classList.remove('active-step'));
+            // Add active class to the one touching the line
+            entry.target.classList.add('active-step');
 
-          // Show the matching image
-          if (matchingImg) {
-            matchingImg.classList.add('active-img');
+            // B. Update Image
+            const index = entry.target.getAttribute('data-index');
+
+            // Hide all images first
+            images.forEach(img => img.classList.remove('active-img'));
+
+            // Show the specific image for this step
+            const matchingImg = document.getElementById(`img-${index}`);
+            if (matchingImg) {
+              matchingImg.classList.add('active-img');
+            }
           }
-        }
-      });
-    }, {
-      threshold: 0.5 // Trigger when 50% of the text is visible
-    });
+        });
+      }, config);
 
-    // 3. Tell the observer to watch every step
-    steps.forEach(step => observer.observe(step));
+      steps.forEach(step => observer.observe(step));
+    });
   </script>
 </body>
 
