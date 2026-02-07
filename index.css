@@ -949,7 +949,7 @@ input[type="reset"] {
 }
 
 /* ==========================================================================
-   7. HAPPY PATHS
+   7. SHADOW STACK
    ========================================================================== */
 
 /* --- 1. FULL SCREEN & BACKGROUND --- */
@@ -974,74 +974,8 @@ input[type="reset"] {
   margin-bottom: -100vh;
 }
 
-.personal-intro-section, 
-.features-section {
-  position: relative;
-  z-index: 2;
-  
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 2rem 0;
-  box-sizing: border-box;
-  color: #333;
-
-  background: transparent; 
-}
-
-/* --- 2. LAYOUT --- */
-.personal-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 4rem;
-  margin: 0 auto;
-
-  /* Entrance Animation */
-  animation: personalFadeUp 1.2s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
-  opacity: 0;
-}
-
-/* Text Side */
-.personal-text {
-  flex: 1;
-  max-width: 600px;
-}
-
-.personal-text h4 {
-  margin-bottom: 1rem;
-}
-
-/* Image Side */
-.personal-visual {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-}
-
-.personal-visual img {
-  max-width: 100%;
-  width: 400px;
-  height: auto;
-  /* Image Bobbing Animation */
-  animation: personalFloat 6s ease-in-out infinite;
-}
-
 /* --- 3. UNIQUE ANIMATIONS --- */
 
-/* Slide Up & Fade In */
-@keyframes personalFadeUp {
-  0% {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 
 /* Background Movement */
 @keyframes personalSkyBreath {
@@ -1070,27 +1004,6 @@ input[type="reset"] {
 
   100% {
     transform: translateY(0px);
-  }
-}
-
-/* --- MOBILE FIXES --- */
-@media (max-width: 768px) {
-  .personal-intro-section {
-    min-height: auto;
-    /* Allow scrolling on phone */
-    padding: 1rem 1rem;
-  }
-
-  .personal-wrapper {
-    flex-direction: column-reverse;
-    /* Image Top, Text Bottom */
-    text-align: center;
-    gap: 2rem;
-  }
-
-  .personal-visual img {
-    width: 250px;
-    /* Smaller image on phone */
   }
 }
 
