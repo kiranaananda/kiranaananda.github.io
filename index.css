@@ -859,7 +859,7 @@ input[type="reset"] {
   width: 60%;
   position: sticky;
   top: 0;
-  height: 100vh;
+  height: 80vh;
   /* Takes full screen height */
   display: flex;
   align-items: center;
