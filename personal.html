@@ -71,20 +71,8 @@
   <div class="frozen-zone-wrapper">
     <div class="sticky-bg-layer"></div>
     <section class="personal-intro-section">
-      <div class="personal-wrapper">
-
-        <div class="personal-text">
-          <h4>Happy Paths</h4>
-          <p>
-            In UX design, a 'happy path' is the ideal journey without errors. In my life, the happy path isn't always a
-            straight line. Here is what keeps me grounded when I'm away from the keyboard.
-          </p>
-        </div>
-
-        <div class="personal-visual">
-          <img src="/assets/ice.svg" alt="Ice">
-        </div>
-
+      <div class="intro-text-wrapper">
+        <h6>Here is what keeps me grounded when I'm away from the keyboard.</h6>
       </div>
     </section>
     <section class="features-section">
@@ -135,6 +123,51 @@
       </section>
     </section>
   </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+
+      const steps = document.querySelectorAll('.step');
+      const images = document.querySelectorAll('.sticky-img');
+
+      // 1. Configure the "Tripwire"
+      const config = {
+        root: null,
+        // This is the magic. It shrinks the "view zone" to a thin line in the middle.
+        // -50% from top, -50% from bottom.
+        rootMargin: '-50% 0px -50% 0px',
+        threshold: 0 // Trigger the MOMENT it touches that center line
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          // 2. Logic: Triggers exactly when crossing the center
+          if (entry.isIntersecting) {
+
+            // A. Update Text
+            // Clear all active classes first so we don't have duplicates
+            steps.forEach(s => s.classList.remove('active-step'));
+            // Add active class to the one touching the line
+            entry.target.classList.add('active-step');
+
+            // B. Update Image
+            const index = entry.target.getAttribute('data-index');
+
+            // Hide all images first
+            images.forEach(img => img.classList.remove('active-img'));
+
+            // Show the specific image for this step
+            const matchingImg = document.getElementById(`img-${index}`);
+            if (matchingImg) {
+              matchingImg.classList.add('active-img');
+            }
+          }
+        });
+      }, config);
+
+      steps.forEach(step => observer.observe(step));
+    });
+  </script>
   <!-- --------------------------- -------------------- --------------------- -->
 
   <section class="thought-cloud-section">
@@ -410,51 +443,6 @@
     </nav>
   </div>
   </div>
-
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-
-      const steps = document.querySelectorAll('.step');
-      const images = document.querySelectorAll('.sticky-img');
-
-      // 1. Configure the "Tripwire"
-      const config = {
-        root: null,
-        // This is the magic. It shrinks the "view zone" to a thin line in the middle.
-        // -50% from top, -50% from bottom.
-        rootMargin: '-50% 0px -50% 0px',
-        threshold: 0 // Trigger the MOMENT it touches that center line
-      };
-
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          // 2. Logic: Triggers exactly when crossing the center
-          if (entry.isIntersecting) {
-
-            // A. Update Text
-            // Clear all active classes first so we don't have duplicates
-            steps.forEach(s => s.classList.remove('active-step'));
-            // Add active class to the one touching the line
-            entry.target.classList.add('active-step');
-
-            // B. Update Image
-            const index = entry.target.getAttribute('data-index');
-
-            // Hide all images first
-            images.forEach(img => img.classList.remove('active-img'));
-
-            // Show the specific image for this step
-            const matchingImg = document.getElementById(`img-${index}`);
-            if (matchingImg) {
-              matchingImg.classList.add('active-img');
-            }
-          }
-        });
-      }, config);
-
-      steps.forEach(step => observer.observe(step));
-    });
-  </script>
 </body>
 
 
