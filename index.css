@@ -930,21 +930,6 @@ input[type="reset"] {
     opacity: 1;
   }
 
-  .img-stack {
-    height: 300px;
-    margin-bottom: 2rem;
-  }
-
-  .sticky-img {
-    position: relative;
-    opacity: 1;
-    transform: none;
-    display: none;
-  }
-
-  .sticky-img.active-img {
-    display: none;
-    
   }.scrolly-img-col {
     display: none;
   }
