@@ -261,7 +261,7 @@ input[type="reset"] {
    4. HERO & FEATURES SECTION
    ========================================================================== */
 .hero-without-image {
-  background-color: var(--bg-light);
+  outline-color: var(--bg-light);
   padding: 80px 30px;
   position: relative;
 }
@@ -297,7 +297,7 @@ input[type="reset"] {
 
 /* Features Grid */
 .skill-features-section {
-  background-color: var(--bg-white);
+  background-color: transparent;
   padding: 60px 20px;
 }
 
@@ -333,7 +333,7 @@ input[type="reset"] {
 /* ==========================================================================
    5. SEAMLESS RESUME STYLES
    ========================================================================== */
-.seamless-resume { background-color: var(--bg-light); }
+.seamless-resume { outline-color: var(--bg-light); }
 
 .resume-flow-wrapper {
   margin: 0 auto;
