@@ -185,7 +185,7 @@ input[type="reset"] {
    ========================================================================== */
 .w-nav {
   position: relative;
-  background: var(--bg-white);
+  background: transparent;
   z-index: 1000;
   width: 100%;
 }
@@ -262,7 +262,6 @@ input[type="reset"] {
    ========================================================================== */
 .hero-without-image {
   outline-color: var(--bg-light);
-  padding: 80px 30px;
   position: relative;
 }
 
