@@ -17,14 +17,6 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playpen+Sans&display=swap" rel="stylesheet">
-
-  <style>
-    .wf-force-outline-none[tabindex="-1"]:focus { outline: none; }
-    .text-center { text-align: center; }
-    .mt-10vh { margin-top: 10vh; }
-    .spacing-y-60-40 { margin: 60px 0 40px 0; }
-    .spacing-y-40-40 { margin: 40px 0; }
-  </style>
 </head>
 
 <body>
@@ -54,8 +46,11 @@
   </header>
 
   <!-- MAIN CONTENT -->
-
-    <main>
+  <main>
+    
+    <!-- ========================================================= -->
+    <!-- ZONE 1: STICKY BACKGROUND AREA                            -->
+    <!-- ========================================================= -->
     <div class="frozen-zone-wrapper">
       <div class="sticky-bg-layer" aria-hidden="true"></div>
       
@@ -65,27 +60,32 @@
         </div>
       </section>
       
- <!-- ABOUT ME -->     
-<section class="scattered-intro-section" id="scattered-container">
-  <!-- All items exist in a single full-screen container -->
-  
-  <article class="scattered-item" id="item-woods" data-speed="0.15">
-    <h3>Lost in the Woods</h3>
-    <p>There is no better reset button than fresh air. Camping has become my favorite way to slow down. Fresh air, campfires, and slow mornings remind me that not every problem needs an immediate solution.</p>
-  </article>
+      <!-- ABOUT ME (Scattered Layout) -->     
+      <section class="scattered-intro-section" id="scattered-container">
+        <!-- Container added below to respect site margins -->
+        <div class="container scattered-bounds">
+          <article class="scattered-item" id="item-woods" data-speed="0.15">
+            <h3>Lost in the Woods</h3>
+            <p>There is no better reset button than fresh air. Camping has become my favorite way to slow down. Fresh air, campfires, and slow mornings remind me that not every problem needs an immediate solution.</p>
+          </article>
 
-  <article class="scattered-item" id="item-dough" data-speed="-0.1">
-    <h3>Debugging Dough</h3>
-    <p>Every other Sunday, you'll usually find me baking. My husband and I are currently obsessed with tiramisu and pound cake. It’s messy, it’s loud, and it’s the best part of my week.</p>
-  </article>
+          <article class="scattered-item" id="item-dough" data-speed="-0.1">
+            <h3>Debugging Dough</h3>
+            <p>Every other Sunday, you'll usually find me baking. My husband and I are currently obsessed with tiramisu and pound cake. It’s messy, it’s loud, and it’s the best part of my week.</p>
+          </article>
 
-  <article class="scattered-item" id="item-clothes" data-speed="0.08">
-    <h3>Revamping Clothes</h3>
-    <p>I love understanding how garments are constructed and how individual pieces come together to create movement and structure. I really enjoy modifying thrifted dresses to give them a new life.</p>
-  </article>
-</section>
-</main>
+          <article class="scattered-item" id="item-clothes" data-speed="0.08">
+            <h3>Revamping Clothes</h3>
+            <p>I love understanding how garments are constructed and how individual pieces come together to create movement and structure. I really enjoy modifying thrifted dresses to give them a new life.</p>
+          </article>
+        </div>
+      </section>
+    </div> <!-- ✅ Closes the frozen-zone-wrapper properly -->
       
+    <!-- ========================================================= -->
+    <!-- ZONE 2: NORMAL SCROLLING AREA                             -->
+    <!-- ========================================================= -->
+
     <!-- THOUGHT CLOUD SECTION -->
     <section class="thought-cloud-section" aria-labelledby="thoughts-intro">
       <div class="thought-container">
@@ -123,7 +123,7 @@
     <section class="onion-split-section" aria-labelledby="brand-analysis-title">
       <div class="intro-text-wrapper">
         <h2 id="brand-analysis-title" class="text-left">Curiosity doesn't just shape the questions I ask about the world—it also shapes the questions I ask about myself.</h2>
-        <p class="spacing-y-60-40">As part of a branding psychology project, I explored how perceptions of me change across different levels of social closeness. I<a href="https://nyu.qualtrics.com/jfe/form/SV_eb8c9BiPSgM87DE" target="_blank" rel="noopener noreferrer">surveyed</a> 21 people—from strangers to close friends—to understand how relationships shape personal brands. The findings revealed both expected patterns and surprising blind spots in how I present myself.</p>
+        <p class="spacing-y-60-40">As part of a branding psychology project, I explored how perceptions of me change across different levels of social closeness. I <a href="https://nyu.qualtrics.com/jfe/form/SV_eb8c9BiPSgM87DE" target="_blank" rel="noopener noreferrer">surveyed</a> 21 people—from strangers to close friends—to understand how relationships shape personal brands. The findings revealed both expected patterns and surprising blind spots in how I present myself.</p>
       </div>
 
       <div class="onion-header">
@@ -266,9 +266,11 @@
         </div>
       </div>
         <div class="intro-text-wrapper">
-          <p class="spacing-y-40-40">Whether I'm interviewing users, reading psychology papers, or wandering through the woods, I'm fascinated by the same thing: understanding why people think, feel, and behave the way they do. That curiosity is what I hope to bring to every research project.</div>
-      </div>
+          <p class="spacing-y-40-40">Whether I'm interviewing users, reading psychology papers, or wandering through the woods, I'm fascinated by the same thing: understanding why people think, feel, and behave the way they do. That curiosity is what I hope to bring to every research project.</p>
+        </div>
     </section>
+
+  </main>
 
   <!-- FOOTER -->
   <footer>
@@ -307,35 +309,6 @@
   <script>
     document.addEventListener("DOMContentLoaded", () => {
       
-      /* --- Scrollytelling Interaction --- */
-      const steps = document.querySelectorAll('.step');
-      const images = document.querySelectorAll('.sticky-img');
-
-      const config = {
-        root: null,
-        rootMargin: '-50% 0px -50% 0px',
-        threshold: 0 
-      };
-
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            steps.forEach(s => s.classList.remove('active-step'));
-            entry.target.classList.add('active-step');
-
-            const index = entry.target.getAttribute('data-index');
-            images.forEach(img => img.classList.remove('active-img'));
-
-            const matchingImg = document.getElementById(`img-${index}`);
-            if (matchingImg) {
-              matchingImg.classList.add('active-img');
-            }
-          }
-        });
-      }, config);
-
-      steps.forEach(step => observer.observe(step));
-
       /* --- SVG Onion Layer Interaction --- */
       function linkLayer(triggerId, targetId) {
         const trigger = document.getElementById(triggerId);
@@ -362,55 +335,23 @@
             if (defaultCard) defaultCard.classList.add('active');
         });
       }
+
+      /* --- Scattered Layout Subtle Parallax (No Floating!) --- */
+      if (window.innerWidth > 768) {
+        const items = document.querySelectorAll('.scattered-item');
+        
+        window.addEventListener('scroll', () => {
+          const scrollY = window.scrollY;
+          
+          items.forEach(item => {
+            // Grab the speed variable we set in the HTML
+            const speed = parseFloat(item.getAttribute('data-speed'));
+            // Move the item vertically based on scroll depth
+            item.style.transform = `translateY(${scrollY * speed}px)`;
+          });
+        });
+      }
     });
-  </script>
-  
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-  // Only run the randomizer on desktop screens (mobile stacks cleanly)
-  if (window.innerWidth > 768) {
-    
-    const woods = document.getElementById('item-woods');
-    const dough = document.getElementById('item-dough');
-    const clothes = document.getElementById('item-clothes');
-
-    // Helper function to get a random number between min and max
-    const getRandom = (min, max) => Math.random() * (max - min) + min;
-
-    // ZONE 1: Top Left Area
-    woods.style.top = `${getRandom(10, 25)}%`;
-    woods.style.left = `${getRandom(5, 20)}%`;
-
-    // ZONE 2: Middle Right Area
-    dough.style.top = `${getRandom(35, 50)}%`;
-    dough.style.left = `${getRandom(50, 70)}%`;
-
-    // ZONE 3: Bottom Left/Center Area
-    clothes.style.top = `${getRandom(65, 80)}%`;
-    clothes.style.left = `${getRandom(15, 35)}%`;
-
-    // Fade them in once positioned to avoid visual jumping
-    setTimeout(() => {
-      woods.style.opacity = '1';
-      dough.style.opacity = '1';
-      clothes.style.opacity = '1';
-    }, 100);
-
-    // Subtle Parallax Scroll Effect
-    const items = document.querySelectorAll('.scattered-item');
-    
-    window.addEventListener('scroll', () => {
-      const scrollY = window.scrollY;
-      
-      items.forEach(item => {
-        // Grab the speed variable we set in the HTML
-        const speed = parseFloat(item.getAttribute('data-speed'));
-        // Move the item vertically based on scroll depth
-        item.style.transform = `translateY(${scrollY * speed}px)`;
-      });
-    });
-  }
-});
   </script>
 </body>
 </html>
