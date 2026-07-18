@@ -66,35 +66,23 @@
       </section>
       
  <!-- ABOUT ME -->     
-<section class="text-scroll-section">
-  <!-- The tall container that creates the scroll duration -->
-  <div class="scroll-track">
-    
-    <!-- Item 1: Woods -->
-    <div class="sticky-item item-woods">
-      <div class="content-wrapper left-align">
-        <h3>Lost in the Woods</h3>
-        <p>There is no better reset button than fresh air. Camping has become my favorite way to slow down. Fresh air, campfires, and slow mornings remind me that not every problem needs an immediate solution.</p>
-      </div>
-    </div>
+<section class="scattered-intro-section" id="scattered-container">
+  <!-- All items exist in a single full-screen container -->
+  
+  <article class="scattered-item" id="item-woods" data-speed="0.15">
+    <h3>Lost in the Woods</h3>
+    <p>There is no better reset button than fresh air. Camping has become my favorite way to slow down. Fresh air, campfires, and slow mornings remind me that not every problem needs an immediate solution.</p>
+  </article>
 
-    <!-- Item 2: Dough -->
-    <div class="sticky-item item-dough">
-      <div class="content-wrapper right-align">
-        <h3>Debugging Dough</h3>
-        <p>Every other Sunday, you'll usually find me baking. My husband and I are currently obsessed with tiramisu and pound cake. It’s messy, it’s loud, and it’s the best part of my week.</p>
-      </div>
-    </div>
+  <article class="scattered-item" id="item-dough" data-speed="-0.1">
+    <h3>Debugging Dough</h3>
+    <p>Every other Sunday, you'll usually find me baking. My husband and I are currently obsessed with tiramisu and pound cake. It’s messy, it’s loud, and it’s the best part of my week.</p>
+  </article>
 
-    <!-- Item 3: Clothes -->
-    <div class="sticky-item item-clothes">
-      <div class="content-wrapper center-align">
-        <h3>Refactoring Clothes</h3>
-        <p>I love understanding how garments are constructed and how individual pieces come together to create movement and structure. I really enjoy modifying thrifted dresses to give them a new life. It teaches me patience in a completely different way. (Currently searching for a repair shop for my beloved, broken machine!)</p>
-      </div>
-    </div>
-
-  </div>
+  <article class="scattered-item" id="item-clothes" data-speed="0.08">
+    <h3>Revamping Clothes</h3>
+    <p>I love understanding how garments are constructed and how individual pieces come together to create movement and structure. I really enjoy modifying thrifted dresses to give them a new life.</p>
+  </article>
 </section>
 </main>
       
@@ -375,6 +363,54 @@
         });
       }
     });
+  </script>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+  // Only run the randomizer on desktop screens (mobile stacks cleanly)
+  if (window.innerWidth > 768) {
+    
+    const woods = document.getElementById('item-woods');
+    const dough = document.getElementById('item-dough');
+    const clothes = document.getElementById('item-clothes');
+
+    // Helper function to get a random number between min and max
+    const getRandom = (min, max) => Math.random() * (max - min) + min;
+
+    // ZONE 1: Top Left Area
+    woods.style.top = `${getRandom(10, 25)}%`;
+    woods.style.left = `${getRandom(5, 20)}%`;
+
+    // ZONE 2: Middle Right Area
+    dough.style.top = `${getRandom(35, 50)}%`;
+    dough.style.left = `${getRandom(50, 70)}%`;
+
+    // ZONE 3: Bottom Left/Center Area
+    clothes.style.top = `${getRandom(65, 80)}%`;
+    clothes.style.left = `${getRandom(15, 35)}%`;
+
+    // Fade them in once positioned to avoid visual jumping
+    setTimeout(() => {
+      woods.style.opacity = '1';
+      dough.style.opacity = '1';
+      clothes.style.opacity = '1';
+    }, 100);
+
+    // Subtle Parallax Scroll Effect
+    const items = document.querySelectorAll('.scattered-item');
+    
+    window.addEventListener('scroll', () => {
+      const scrollY = window.scrollY;
+      
+      items.forEach(item => {
+        // Grab the speed variable we set in the HTML
+        const speed = parseFloat(item.getAttribute('data-speed'));
+        // Move the item vertically based on scroll depth
+        item.style.transform = `translateY(${scrollY * speed}px)`;
+      });
+    });
+  }
+});
   </script>
 </body>
 </html>
