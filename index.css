@@ -268,7 +268,7 @@ input[type="reset"] {
 
 .hero-wrapper {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 
@@ -279,6 +279,7 @@ input[type="reset"] {
   justify-content: center;
   align-items: flex-start;
   line-height: 1.8;
+  margin: 4rem;
 }
 
 .hero-profile-img {
