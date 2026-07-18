@@ -55,7 +55,13 @@
       <div class="w-nav-overlay" data-wf-ignore="" id="w-nav-overlay-0"></div>
     </div>
   </header>
-
+  
+  <!-- BUBBLE GLASS -->
+  <canvas id="watercolor-canvas"></canvas>
+  <div class="full-screen-glass"></div>
+  </div>
+  <script src="script/bubbleglassbackground.js"></script>
+  
   <!-- MAIN CONTENT -->
   <main>
     <!-- About Me Section -->
@@ -68,7 +74,7 @@
           </div>
           <div class="hero-split">
             <h4 id="about-heading" class="h5-style">About Me</h4>
-            <p class="margin-bottom-24px">A strategic consumer researcher with 5+ years of experience translating complex user data into actionable insights that shape both product roadmaps and go-to-market strategy. I leverage a unique background spanning tech, SaaS, e-commerce, FMCG, and fintech to deliver clear, data-driven recommendations for product, marketing, and senior leadership. I am passionate about using data storytelling to drive user-centric growth and business decisions.</p>
+            <p class="margin-bottom-24px">Strategic insights and market intelligence professional with 5+ years of experience driving product strategy, growth, and investment decisions across fintech, e-commerce, government, and FMCG in Americas and Southeast Asia. Combines quantitative analytics with behavioral and policy research to uncover opportunities, influence executive decisions, and optimize customer experiences.</p>
           </div>
           <div class="hero-without-image"></div>
         </div>
@@ -130,6 +136,28 @@
           <div class="resume-side">
             <h5 class="side-label">Experience</h5>
           </div>
+          
+          <div class="resume-main">
+            <article class="experience-entry">
+              <div class="logo-timeline" aria-hidden="true">
+                <img src="data:image/png;base64,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" class="company-logo" alt="IIPC New York Logo">
+                <div class="timeline-line"></div>
+              </div>
+              <div class="experience-details">
+                <div class="entry-header">
+                  <h5 class="role-title">Investment Analyst</h5>
+                  <span class="entry-date">Aug 2025 – present</span>
+                </div>
+                <p class="company-info">Indonesia Investment Promotion Center (IIPC) New York / BKPM • New York, NY</p>
+                <ul class="bullet-list">
+                  <li>Identify high-potential investment opportunities through bilateral policy analysis and industry benchmarking, supporting foreign direct investment (FDI) initiatives across the Americas.</li>
+                  <li>Create investment-grade pitch decks and competitive positioning frameworks, analyze project unique selling points, export tariff structures, and market entry barriers to facilitate business matchmaking.</li>
+                  <li>Lead digital go-to-market efforts, executing a strategic website rebrand and deploying data-driven marketing campaigns to optimize inbound investor lead generation.</li>
+                  <li>Manage high-level investment forums, generating a consistent pipeline of ~20 qualified investor leads per event.</li>
+                </ul>
+              </div>
+            </article>
+
           <div class="resume-main">
             <article class="experience-entry">
               <div class="logo-timeline" aria-hidden="true">
@@ -141,12 +169,12 @@
                   <h5 class="role-title">Customer Research</h5>
                   <span class="entry-date">Sep 2023 – Jan 2024</span>
                 </div>
-                <p class="company-info">PT. Allo Bank Indonesia Tbk • Jakarta</p>
+                <p class="company-info">Allo Bank (IDX: BBHI) • Jakarta, Indonesia</p>
                 <ul class="bullet-list">
-                  <li>Informed the go-to-market strategy for banking promotion bundles and QR payments by analyzing competitive gaps.</li>
-                  <li>Uncovered critical friction points in the user onboarding journey, uplifting retention by 20%.</li>
-                  <li>Diagnosed recurring user issues via high-volume support ticket analysis to resolve common pain points.</li>
-                  <li>Mentored junior researchers to establish a 'voice of customer' newsletter and executive reporting pipeline.</li>
+                  <li>Shaped the go-to-market strategy for banking promotion bundles and QR payments by analyzing competitive gaps, prompting marketing to launch targeted promotions that increased product adoption.</li>
+                  <li>Utilized SQL queries to extract a base of 5,000+ daily acquisitions, diagnosing onboarding friction through funnel and behavioral analysis to inform a redesign that increased first-day activation rates by 20%.</li>
+                  <li>Analyzed 1,500+ weekly support tickets to pinpoint core pain points, achieving a 36% reduction in volume by updating the FAQ database and minimizing live agent dependency.</li>
+                  <li>Mentored 2 junior researchers for 'voice of customer' reporting pipeline, cutting turnaround time from 10 to 5 days.</li>
                 </ul>
               </div>
             </article>
@@ -163,10 +191,10 @@
                 </div>
                 <p class="company-info">PT. Bukalapak.com Tbk • Jakarta</p>
                 <ul class="bullet-list">
-                  <li>Executed bi-weekly B2C e-commerce competitive landscape analysis to identify market gaps.</li>
-                  <li>Conducted market analysis and city-level growth projections to evaluate portfolio health.</li>
-                  <li>Developed Python scripts for social media analysis, reducing data subscription costs by 40%.</li>
-                  <li>Directed freelance data labeling, achieving 90%+ classification accuracy for sentiment analysis.</li>
+                  <li>Provided fortnightly market intelligence briefings for 2 core apps (totaling 2M+ combined DAU) to senior management by analyzing the competitive landscape via surveys, market basket analysis, and campaign categorization to counter market surges.</li>
+                  <li>Analyzed declining power user active time for a 1,200+ user B2B SaaS product, justifying its strategic sunset to realign product resources toward the core 500K+ user ecosystem.</li>
+                  <li>Automated social media analytics using Python, reducing third-party data subscription costs by 40%.</li>
+                  <li>Led a data labeling project for social media content, achieving 90%+ classification accuracy for sentiment analysis.</li>
                 </ul>
               </div>
             </article>
@@ -182,9 +210,9 @@
                 </div>
                 <p class="company-info">PT. YouGov Consulting Indonesia • Jakarta</p>
                 <ul class="bullet-list">
-                  <li>Delivered 20+ annual projects (FMCG, fintech) with strong on-time delivery.</li>
-                  <li>Improved project efficiency, reducing average project turnaround from 5 to 3 days.</li>
-                  <li>Designed data-driven sales assets that converted cold leads into paying clients.</li>
+                  <li>Managed end-to-end execution of 20+ annual quantitative projects for premier FMCG, fintech, and on-demand clients.</li>
+                  <li>Improved project efficiency by redesigning the omnibus study, reducing average project turnaround time from 5 to 3 days.</li>
+                  <li>Created data-driven sales materials that converted cold leads into paying clients for custom research studies.</li>
                 </ul>
               </div>
             </article>
@@ -200,19 +228,19 @@
             <div class="skills-grid-seamless">
               <div class="skill-group">
                 <h5 class="skill-cat-title">Strategic & business</h5>
-                <p class="skill-text">data storytelling, insight synthesis, competitive intelligence, market sizing, product analytics</p>
+                <p class="skill-text">Data storytelling, insight synthesis, competitive intelligence, market sizing, product analytics, segmentation.</p>
               </div>
               <div class="skill-group">
                 <h5 class="skill-cat-title">Quantitative research & statistics</h5>
-                <p class="skill-text">survey design, questionnaire development (Qualtrics, SurveyMonkey, Typeform), A/B testing, advanced statistical analysis (regression, clustering, conjoint, ANOVA)</p>
+                <p class="skill-text">Survey design, questionnaire development, Qualtrics, SurveyMonkey, Typeform, A/B testing, regression, clustering, conjoint analysis, ANOVA.</p>
               </div>
               <div class="skill-group">
                 <h5 class="skill-cat-title">Qualitative & UX research</h5>
-                <p class="skill-text">in-depth interviews, focus groups (FGD), usability testing, thematic analysis, content analysis.</p>
+                <p class="skill-text">In-depth interviews (IDI), focus groups (FGD), usability testing, thematic analysis, content analysis.</p>
               </div>
               <div class="skill-group">
                 <h5 class="skill-cat-title">Technical & data tools</h5>
-                <p class="skill-text">SQL (basic), R, Python (pandas), SPSS, Tableau, Looker, Google Data Studio, Metabase, Figma, Jira, Trello</p>
+                <p class="skill-text">SQL (query & script modification), R, Python (pandas), SPSS, Tableau, Looker, Google Data Studio, Figma.</p>
               </div>
             </div>
           </div>
@@ -231,11 +259,11 @@
               </div>
               <div class="experience-details">
                 <div class="entry-header">
-                  <h5 class="role-title">Social and Consumer Psychology (M.A.)</h5>
-                  <span class="entry-date">2024 — 2025</span>
+                  <h5 class="role-title">Consumer Psychology (M.A.)</h5>
+                  <span class="entry-date">Jan 2024 – Jan 2026</span>
                 </div>
                 <p class="company-info">New York University • New York, USA</p>
-                <p class="edu-details"><strong>GPA:</strong> 4.00/4.00. <strong>Concentration:</strong> Social and Consumer Psychology.</p>
+                <p class="edu-details"><strong>GPA:</strong> 4.00/4.00.</p>
               </div>
             </article>
 
