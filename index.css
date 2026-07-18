@@ -442,6 +442,53 @@ input[type="reset"] {
 }
 
 /* ==========================================================================
+   6. STICKY INTERACTIVE THOUGHT CLOUD
+   ========================================================================== */
+.sticky-stack-container {
+  padding: 4rem 0 2rem 0;
+  margin: 0 auto;
+  max-width: 1100px;
+}
+
+.sticky-card {
+  position: sticky;
+  position: -webkit-sticky;
+  background: var(--bg-white);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
+  margin-bottom: 4rem;
+  border: 1px solid #eee;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  transition: margin-left 0.3s ease, top 0.3s ease;
+}
+
+.sticky-card img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.sticky-card h6 {
+  margin: 0;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+/* Desktop Stack Staircase Coordinates */
+@media (min-width: 769px) {
+  .sticky-card:nth-child(1) { top: 100px; margin-left: 0%; }
+  .sticky-card:nth-child(2) { top: 140px; margin-left: 5%; }
+  .sticky-card:nth-child(3) { top: 180px; margin-left: 10%; }
+  .sticky-card:nth-child(4) { top: 220px; margin-left: 15%; }
+}
+
+/* ==========================================================================
    7. CONSTELATTION
    ========================================================================== */
 
