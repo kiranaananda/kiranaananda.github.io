@@ -495,7 +495,6 @@ input[type="reset"] {
 .text-scroll-section {
   position: relative;
   width: 100%;
-  padding-bottom: 20vh; /* Extra breathing room at the bottom */
 }
 
 /* The long track the user scrolls down */
