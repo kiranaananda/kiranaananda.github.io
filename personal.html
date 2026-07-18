@@ -54,52 +54,36 @@
   </header>
 
   <!-- MAIN CONTENT -->
-  <main>
-    <div class="frozen-zone-wrapper">
-      <div class="sticky-bg-layer" aria-hidden="true"></div>
-      
-      <section class="personal-intro-section" aria-labelledby="hobbies-intro">
-        <div class="intro-text-wrapper">
-          <h2 id="thoughts-intro" class="sr-only">Here are a few things that keep me grounded.</h2>
-        </div>
-      </section>
-
-      <section class="features-section">
-        <div class="scrolly-container">
-          <div class="scrolly-text-col">
-            <article class="step" data-index="1">
-              <div class="step-content">
-                <h3>Lost in the Woods</h3>
-                <p>There is no better reset button than fresh air. Camping has become my favorite way to slow down. Fresh air, campfires, and slow mornings remind me that not every problem needs an immediate solution.</p>
-              </div>
-            </article>
-
-            <article class="step" data-index="2">
-              <div class="step-content">
-                <h3>Debugging Dough</h3>
-                <p>Every other Sunday, you'll usually find me baking. My husband and I are currently obsessed with tiramisu and pound cake. It’s messy, it’s loud, and it’s the best part of my week.</p>
-              </div>
-            </article>
-
-            <article class="step" data-index="3">
-              <div class="step-content">
-                <h3>Refactoring Clothes</h3>
-                <p>I love understanding how garments are constructed and how individual pieces come together to create movement and structure. I really enjoy modifying thrifted dresses to give them a new life. It teaches me patience in a completely different way. (Currently searching for a repair shop for my beloved, broken machine!)</p>
-              </div>
-            </article>
-          </div>
-
-          <div class="scrolly-img-col" aria-hidden="true">
-            <div class="img-stack">
-              <img src="/assets/hiking.svg" class="sticky-img active-img" id="img-1" alt="Hiking doodle icon">
-              <img src="/assets/baking.svg" class="sticky-img" id="img-2" alt="Baking doodle icon">
-              <img src="/assets/sewing.svg" class="sticky-img" id="img-3" alt="Sewing doodle icon">
-            </div>
-          </div>
-        </div>
-      </section>
+<section class="text-scroll-section">
+  <!-- The tall container that creates the scroll duration -->
+  <div class="scroll-track">
+    
+    <!-- Item 1: Woods -->
+    <div class="sticky-item item-woods">
+      <div class="content-wrapper left-align">
+        <h3>Lost in the Woods</h3>
+        <p>There is no better reset button than fresh air. Camping has become my favorite way to slow down. Fresh air, campfires, and slow mornings remind me that not every problem needs an immediate solution.</p>
+      </div>
     </div>
 
+    <!-- Item 2: Dough -->
+    <div class="sticky-item item-dough">
+      <div class="content-wrapper right-align">
+        <h3>Debugging Dough</h3>
+        <p>Every other Sunday, you'll usually find me baking. My husband and I are currently obsessed with tiramisu and pound cake. It’s messy, it’s loud, and it’s the best part of my week.</p>
+      </div>
+    </div>
+
+    <!-- Item 3: Clothes -->
+    <div class="sticky-item item-clothes">
+      <div class="content-wrapper center-align">
+        <h3>Refactoring Clothes</h3>
+        <p>I love understanding how garments are constructed and how individual pieces come together to create movement and structure. I really enjoy modifying thrifted dresses to give them a new life. It teaches me patience in a completely different way. (Currently searching for a repair shop for my beloved, broken machine!)</p>
+      </div>
+    </div>
+
+  </div>
+</section>
     <!-- THOUGHT CLOUD SECTION -->
     <section class="thought-cloud-section" aria-labelledby="thoughts-intro">
       <div class="thought-container">
