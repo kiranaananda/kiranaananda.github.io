@@ -786,16 +786,17 @@ input[type="reset"] {
   margin: 0 auto 40px auto; 
 }
 
-.footer-intro h2 {
-  font-size: 1.8rem;
+.footer-intro h1, h2, h3, h4, h5 {
   margin-bottom: 12px;
   color: var(--text-dark, #222);
+  align-items: center;
 }
 
 .footer-intro p {
   color: #555; 
   line-height: 1.6;
   font-size: 1.1rem;
+  align-items: center;
 }
 
 .footer-nav-list {
@@ -839,6 +840,7 @@ input[type="reset"] {
   color: rgba(0, 0, 0, 0.5);
   font-size: 0.85rem;
   margin: 0;
+  align-items: center;
 }
 
 /* ==========================================================================
