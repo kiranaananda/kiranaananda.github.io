@@ -789,14 +789,14 @@ input[type="reset"] {
 .footer-intro h1, h2, h3, h4, h5 {
   margin-bottom: 12px;
   color: var(--text-dark, #222);
-  align-items: center;
+  text-align: center !important; 
 }
 
 .footer-intro p {
   color: #555; 
   line-height: 1.6;
   font-size: 1.1rem;
-  align-items: center;
+  text-align: center !important; 
 }
 
 .footer-nav-list {
@@ -834,6 +834,7 @@ input[type="reset"] {
 .footer-copyright {
   border-top: 1px solid rgba(0, 0, 0, 0.05);
   padding-top: 25px;
+  text-align: center !important; 
 }
 
 .footer-copyright p {
@@ -1000,4 +1001,3 @@ body {
   font-weight: normal;
   font-style: normal;
 }
-
