@@ -66,19 +66,9 @@ h2 { margin-top: 2.5rem; font-size: 2rem; line-height: 1.2; }
 h3 { margin-top: 2rem; font-size: 1.75rem; line-height: 1.2; }
 h4 { margin-top: 1.5rem; font-size: 1.5rem; line-height: 1.3; }
 h5 { margin-top: 1.25rem; font-size: 1.25rem; line-height: 1.3; }
-h6 {
-  margin-top: 1rem;
-  font-size: 1.1rem;
-  line-height: 1.3;
-  letter-spacing: 1px;
-  text-transform: none;
-}
+h6 { margin-top: 1rem; font-size: 1.1rem; line-height: 1.3; letter-spacing: 1px; text-transform: none; }
 
-p {
-  margin-top: 0;
-  margin-bottom: 10px;
-  line-height: 1.8;
-}
+p { margin-top: 0; margin-bottom: 10px; line-height: 1.8; }
 
 blockquote {
   border-left: 5px solid #e2e2e2;
@@ -635,8 +625,8 @@ input[type="reset"] {
   z-index: 2;
 }
 
-.card-header h5 { margin: 0 0 5px 0; font-size: 1.2rem; }
-.card-header p { margin: 0 0 20px 0; font-size: 0.85rem; color: #888; }
+.card-header h5 { margin: 0 0 5px 0;}
+.card-header p { margin: 0 0 20px 0; color: #888; }
 
 /* Attribute Grid Structure */
 .attribute-grid {
@@ -782,20 +772,10 @@ input[type="reset"] {
 
 /* --- Content Styling --- */
 .footer-intro {
-  max-width: 600px;
-  margin: 0 auto 40px auto; 
-}
-
-.footer-intro h1, h2, h3, h4, h5 {
-  margin-bottom: 12px;
+  max-width: 80%;
+  margin: 0 auto 40px auto;
+    margin-bottom: 12px;
   color: var(--text-dark, #222);
-  text-align: center !important; 
-}
-
-.footer-intro p {
-  color: #555; 
-  line-height: 1.6;
-  font-size: 1.1rem;
   text-align: center !important; 
 }
 
@@ -919,9 +899,8 @@ body {
 @media screen and (max-width: 768px) {
   /* Global Components Reset */
   .container, .navbar-top { padding: 10px 15px; }
-  .navbar-brand h6 { font-size: 16px; }
   .nav-menu-two { padding: 6px 15px; }
-  .nav-link, .nav-link-accent { font-size: 13px; padding: 5px 8px; }
+  .nav-link, .nav-link-accent {padding: 5px 8px; }
 
   /* Hero Architecture */
   .hero-without-image { padding: 60px 15px; }
@@ -951,7 +930,6 @@ body {
     margin-bottom: 2rem;
   }
   .sticky-card img { width: 50px; height: 50px; }
-  .sticky-card h6 { font-size: 1rem; }
   
   .sticky-card:nth-child(1) { top: 80px !important; }
   .sticky-card:nth-child(2) { top: 95px !important; }
@@ -988,8 +966,7 @@ body {
 
 /* --- MICRO SCREENS SAFETY NET --- */
 @media screen and (max-width: 360px) {
-  .navbar-brand h6 { font-size: 12px; }
-  .nav-link, .nav-link-accent { font-size: 10px; padding: 4px 6px; }
+  .nav-link, .nav-link-accent {padding: 4px 6px; }
 }
 
 /* ==========================================================================
