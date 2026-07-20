@@ -1115,25 +1115,30 @@
   }
 
   .footer-nav-list {
-    flex-wrap: wrap;
-    gap: 15px; 
+    flex-wrap: nowrap; 
+    gap: 12px;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .footer-nav-link, 
+  .footer-nav-accent {
+    font-size: 0.85rem; 
+    gap: 5px;
+  }
+
+  .footer-nav-link img, 
+  .footer-nav-accent img {
+    width: 18px; 
   }
 
   .footer-nav-divider-item {
     display: none; 
   }
 
-  .footer-side {
-    border-left: none; /* Removes the vertical line */
-    padding-left: 0;
-    text-align: center; /* Centers the text */
-    
-    border-top: 1px solid rgba(0, 0, 0, 0.05); 
-    padding-top: 30px;
-    width: 100%;
-    max-width: 300px;
+.footer-side {
+    display: none; 
   }
-}
 
   /* ==========================================================================
    9B. BUBBLE BACKGROUND GLASS LOOK
