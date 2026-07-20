@@ -17,6 +17,20 @@
   --bg-card: #f8f9fb;
   --bg-dark: #1a1b1f;
 
+  /* Accent Systems */
+  --accent-outer: #00695C;
+  --accent-outer-bg: #E0F2F1;
+  --accent-outer-border: #B2DFDB;
+  
+  --accent-middle: #F57F17;
+  --accent-middle-bg: #FFFDE7;
+  --accent-middle-border: #FFF176;
+  
+  --accent-pink: #C2185B;
+  --accent-pink-bg: #FCE4EC;
+  --accent-pink-border: #F48FB1;
+  --accent-pink-deep: #880E4F;
+
 
   /* ==========================================================================
    1. GLOBAL RESETS & TYPOGRAPHY
