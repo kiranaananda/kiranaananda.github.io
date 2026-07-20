@@ -347,10 +347,12 @@
     display: grid;
     place-items: center;
     justify-content: center;
-    max-width: 100%;
+    max-width: 200px;
+    width: 100%;
     margin: 0 auto 30px;
     border-radius: 50%;
     transition: opacity 100ms ease;
+    height: auto;
   }
 
   .hero-profile-img:hover .avatar {
@@ -1078,6 +1080,46 @@
   .footer-side p:last-child {
     color: #666;
   }
+
+  /* ==========================================================================
+   FOOTER RESPONSIVENESS (Mobile & Tablet)
+   ========================================================================== */
+@media (max-width: 850px) {
+  
+  .footer-custom-wrapper {
+    padding: 60px 20px 30px;
+  }
+
+  .footer-content-layer {
+    grid-template-columns: 1fr; 
+    gap: 40px;
+    justify-items: center;
+  }
+
+  .footer-logo {
+    display: none;
+  }
+
+  .footer-nav-list {
+    flex-wrap: wrap;
+    gap: 15px; 
+  }
+
+  .footer-nav-divider-item {
+    display: none; 
+  }
+
+  .footer-side {
+    border-left: none; /* Removes the vertical line */
+    padding-left: 0;
+    text-align: center; /* Centers the text */
+    
+    border-top: 1px solid rgba(0, 0, 0, 0.05); 
+    padding-top: 30px;
+    width: 100%;
+    max-width: 300px;
+  }
+}
 
   /* ==========================================================================
    9B. BUBBLE BACKGROUND GLASS LOOK
