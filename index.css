@@ -1245,18 +1245,19 @@
     .features-grid {
       display: grid;
       grid-template-columns: 1fr;
-      gap: 30px;
+      gap: 24px; /* Reduced slightly for mobile screens */
     }
 
     /* Resume Linear Stack */
     .resume-row {
       flex-direction: column;
-      margin-bottom: 40px;
+      margin-bottom: 32px;
     }
 
     .resume-side {
       width: 100%;
-      margin-bottom: 20px;
+      flex: none;
+      margin-bottom: 8px;
       text-align: left;
     }
 
@@ -1267,6 +1268,7 @@
     .skills-grid-seamless {
       grid-template-columns: 1fr;
       padding-left: 0;
+      gap: 16px;
     }
 
     .entry-header {
@@ -1280,7 +1282,10 @@
     }
 
     .logo-timeline {
-      flex: 0 0 60px;
+      flex: none;
+      width: 48px;
+      height: auto;
+      margin-bottom: 12px;
     }
 
     /* Interactive Cloud Overlap Fixed Coords */
