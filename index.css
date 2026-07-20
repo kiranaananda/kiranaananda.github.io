@@ -30,6 +30,7 @@
   --accent-pink-bg: #FCE4EC;
   --accent-pink-border: #F48FB1;
   --accent-pink-deep: #880E4F;
+}
 
 
   /* ==========================================================================
@@ -1139,6 +1140,8 @@
 .footer-side {
     display: none; 
   }
+}
+
 
   /* ==========================================================================
    9B. BUBBLE BACKGROUND GLASS LOOK
