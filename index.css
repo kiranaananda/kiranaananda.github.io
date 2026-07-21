@@ -642,11 +642,13 @@
   #item-dough {
     align-self: flex-end;
     margin-right: 15%;
+    margin-top: 15px;
   }
 
   #item-clothes {
     align-self: flex-start;
     margin-left: 30%;
+    margin-top: 15px;
   }
 
   /* Stack them neatly in the center on mobile phones */
