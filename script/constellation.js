@@ -1,30 +1,24 @@
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const scatteredItems = document.querySelectorAll(".scattered-item");
+document.addEventListener("DOMContentLoaded", function () {
+  const scatteredItems = document.querySelectorAll(".scattered-item");
+  if (!scatteredItems.length) return;
 
-    function updateParallax() {
-      scatteredItems.forEach((item) => {
-        const speed = parseFloat(item.getAttribute("data-speed")) || 0;
-        const rect = item.getBoundingClientRect();
-        const windowCenter = window.innerHeight / 2;
-        const elementCenter = rect.top + rect.height / 2;
+  function updateParallax() {
+    const windowCenter = window.innerHeight / 2;
 
-        // Calculate distance from center of the viewport
-        const distanceFromCenter = elementCenter - windowCenter;
+    scatteredItems.forEach(function (item) {
+      const speed = parseFloat(item.getAttribute("data-speed")) || 0;
+      const rect = item.getBoundingClientRect();
+      const elementCenter = rect.top + rect.height / 2;
+      const distanceFromCenter = elementCenter - windowCenter;
+      const translateY = distanceFromCenter * speed;
 
-        // Move element based on its specific speed multiplier
-        const translateY = distanceFromCenter * speed;
-
-        item.style.transform = `translate3d(0, ${translateY}px, 0)`;
-      });
-    }
-
-    // Run on scroll
-    window.addEventListener("scroll", () => {
-      requestAnimationFrame(updateParallax);
+      item.style.transform = "translate3d(0, " + translateY + "px, 0)";
     });
+  }
 
-    // Run on initial load
-    updateParallax();
+  window.addEventListener("scroll", function () {
+    requestAnimationFrame(updateParallax);
   });
-</script>
+
+  updateParallax();
+});
