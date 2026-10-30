@@ -24,15 +24,18 @@
   /* Brand / Logo Styling */
   .navbar-brand,
   .w-nav-brand {
-    flex-shrink: 1;
-    margin-right: 15px;
-    color: var(--text-heading);
-    text-decoration: none;
-  }
+   display: inline-flex !important;
+   align-items: center !important;
+   gap: 8px;
+   text-decoration: none;
+   color: var(--text-heading);
+   }
 
   .navbar-brand h6 {
-    margin: 0;
-    white-space: nowrap;
+   margin: 0 !important;
+   padding: 0 !important;
+   line-height: 1 !important;
+   white-space: nowrap;
   }
 
   /* Navigation Wrapper Overrides */
