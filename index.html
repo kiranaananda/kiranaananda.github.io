@@ -4,44 +4,58 @@
 <html lang="en">
 
 <head>
-{% include head.html %}
+  {% include head.html %}
 </head>
 
-<body data-new-gr-c-s-check-loaded="14.1155.0" data-gr-ext-installed="">
+<body>
 
   {% include navbar.html %}
 
-  <!-- BUBBLE GLASS -->
+  <!-- Ambient Background Elements -->
   <canvas id="watercolor-canvas"></canvas>
   <div class="full-screen-glass"></div>
   <script src="script/bubbleglassbackground.js"></script>
 
-  <!-- MAIN CONTENT -->
+  <!-- ==========================================================================
+       MAIN CONTENT
+       ========================================================================== -->
   <main>
-    <!-- About Me Section -->
+
+    <!-- ----------------------------------------------------------------------
+         Hero / About Me Section
+         ---------------------------------------------------------------------- -->
     <section class="hero-without-image" aria-labelledby="about-heading">
       <div class="container">
         <div class="hero-wrapper">
           <div class="hero-split">
-            <img src="kirana_formal_recolor.jpg" alt="Portrait of Kirana Krzyzak"
-              class="hero-profile-img">
+            <img 
+              src="kirana_formal_recolor.jpg" 
+              alt="Portrait of Kirana Krzyzak"
+              class="hero-profile-img"
+            >
           </div>
           <div class="hero-split">
             <h4 id="about-heading" class="h5-style">About Me</h4>
-            <p class="margin-bottom-24px">Strategic insights and market intelligence professional with 6+ years of
+            <p class="margin-bottom-24px">
+              Strategic insights and market intelligence professional with 6+ years of
               experience driving product strategy, growth, and investment decisions across fintech, e-commerce,
               government, and FMCG in Americas and Southeast Asia. Combines quantitative analytics with behavioral and
               macro research to uncover opportunities, influence executive decisions, and optimize customer
-              experiences.</p>
+              experiences.
+            </p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Roles Overview Section -->
+    <!-- ----------------------------------------------------------------------
+         Core Competencies Grid
+         ---------------------------------------------------------------------- -->
     <section class="skill-features-section" aria-label="Core Competencies">
       <div class="container">
         <div class="features-grid">
+
+          <!-- Data Analytics -->
           <div class="feature-card">
             <div class="feature-icon" aria-hidden="true">
               <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -51,9 +65,10 @@
               </svg>
             </div>
             <h4>Data Analytics</h4>
-            <p>Factor analysis, clustering, and correspondence analysis turned into decisions: three digital banking personas for Allo Bank’s C-suite, 
-              TwoStep clustering of 115 merchants plus 3,154 users to pick a market-entry segment, and Python automation that cut data costs by 40%.</p>
+            <p>Factor analysis, clustering, and correspondence analysis turned into decisions: three digital banking personas for Allo Bank’s C-suite, TwoStep clustering of 115 merchants plus 3,154 users to pick a market-entry segment, and Python automation that cut data costs by 40%.</p>
           </div>
+
+          <!-- Consumer Insights -->
           <div class="feature-card">
             <div class="feature-icon" aria-hidden="true">
               <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -62,49 +77,64 @@
               </svg>
             </div>
             <h4>Consumer Insights</h4>
-            <p>Surveys, focus groups, and behavioral studies that explain why people act the way they do: 404 micro-retailers on voucher adoption,
-              200 wholesale merchants on retention, and a Voice-of-Customer program that cut post-peak complaints by 41%.</p>
+            <p>Surveys, focus groups, and behavioral studies that explain why people act the way they do: 404 micro-retailers on voucher adoption, 200 wholesale merchants on retention, and a Voice-of-Customer program that cut post-peak complaints by 41%.</p>
           </div>
+
+          <!-- Market Intelligence -->
           <div class="feature-card">
             <div class="feature-icon" aria-hidden="true">
               <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                <polyline points="3,13 8,9 12,11 17,5" fill="none" stroke="#FFFFFF" stroke-width="2"
-                  stroke-linecap="round" stroke-linejoin="round" />
+                <polyline points="3,13 8,9 12,11 17,5" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                 <polygon points="17,5 15,5 17,7" fill="#FFFFFF" />
               </svg>
             </div>
             <h4>Market Intelligence</h4>
-            <p>Competitive and market research from consumer apps to FDI: 14 competitive intelligence studies at Bukalapak, brand tracking for Gojek and 
-              Traveloka at YouGov, and investment feasibility research on Indonesia for U.S. enterprise leads.</p>
+            <p>Competitive and market research from consumer apps to FDI: 14 competitive intelligence studies at Bukalapak, brand tracking for Gojek and Traveloka at YouGov, and investment feasibility research on Indonesia for U.S. enterprise leads.</p>
           </div>
+
         </div>
       </div>
     </section>
 
-    <!-- Resume Section -->
+    <!-- ----------------------------------------------------------------------
+         Resume Download Action Bar
+         ---------------------------------------------------------------------- -->
     <section class="resume-header-row">
       <div class="text-center">
         <h4 class="playpen-font h5-style">Resume</h4>
-        <a href="https://docs.google.com/document/d/1uyI5XHFIkVnkXcFRYii4z5hDJKxU3jp3Tm_uz72IyaY/edit?usp=sharing"
-          target="_blank" rel="noopener noreferrer" class="highlight-word">DOWNLOAD HERE</a>
+        <a 
+          href="https://docs.google.com/document/d/1uyI5XHFIkVnkXcFRYii4z5hDJKxU3jp3Tm_uz72IyaY/edit?usp=sharing"
+          target="_blank" 
+          rel="noopener noreferrer" 
+          class="highlight-word"
+        >
+          DOWNLOAD HERE
+        </a>
       </div>
     </section>
 
+    <!-- ----------------------------------------------------------------------
+         Detailed Resume Section
+         ---------------------------------------------------------------------- -->
     <section class="seamless-resume" aria-label="Detailed Resume">
       <div class="resume-flow-wrapper">
 
-        <!-- Experience Row -->
+        <!-- WORK EXPERIENCE ROW -->
         <div class="resume-row">
           <div class="resume-side">
             <h5 class="side-label">Experience</h5>
           </div>
 
           <div class="resume-main">
+
+            <!-- IIPC New York / BKPM -->
             <article class="experience-entry">
               <div class="logo-timeline" aria-hidden="true">
                 <img
                   src="https://static.wixstatic.com/media/88dd4d_5d2032946f394a8faf903b6796cca599~mv2.png/v1/fill/w_190,h_190,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Logo%20IIPC.png"
-                  class="company-logo" alt="Logo IIPC New York">
+                  class="company-logo" 
+                  alt="IIPC New York Logo"
+                >
               </div>
               <div class="experience-details">
                 <div class="entry-header">
@@ -116,18 +146,14 @@
                   <span class="entry-date">New York, NY</span>
                 </div>
                 <ul class="bullet-list">
-                  <li>Conduct market feasibility, competitive intelligence, and trade and investment research across the
-                    Americas to evaluate foreign direct investment (FDI) opportunities in Indonesia across manufacturing,
-                    downstream processing, and land-intensive capital projects, using industry sources, fDi Markets, 
-                    Statista, and diplomatic briefings.</li>
-                  <li>Prepare internal research reports and slide decks on competitive positioning, and investment feasibility 
-                    for U.S. enterprise leads; currently managing ~20 leads in the pipeline.</li>
-                  <li>Manage 3 investment forums a year, generating ~3 qualified leads per event; led a website rebrand and 
-                    multi-channel G2B campaigns to expand the investor pipeline.</li>
+                  <li>Conduct market feasibility, competitive intelligence, and trade and investment research across the Americas to evaluate foreign direct investment (FDI) opportunities in Indonesia across manufacturing, downstream processing, and land-intensive capital projects, using industry sources, fDi Markets, Statista, and diplomatic briefings.</li>
+                  <li>Prepare internal research reports and slide decks on competitive positioning, and investment feasibility for U.S. enterprise leads; currently managing ~20 leads in the pipeline.</li>
+                  <li>Manage 3 investment forums a year, generating ~3 qualified leads per event; led a website rebrand and multi-channel G2B campaigns to expand the investor pipeline.</li>
                 </ul>
               </div>
             </article>
 
+            <!-- Allo Bank -->
             <article class="experience-entry">
               <div class="logo-timeline" aria-hidden="true">
                 <img src="https://www.allobank.com/assets/logo-allo.png" class="company-logo" alt="Allo Bank Logo">
@@ -143,21 +169,21 @@
                   <span class="entry-date">Jakarta, Indonesia</span>
                 </div>
                 <ul class="bullet-list">
-                  <li>Applied principal component and factor analysis to 12 psychometric statements and brand health metrics to develop 
-                    three digital banking personas (digital wealth builders 42%, cautious savers 47%, and conservative beginners 12%), 
-                    informing a C-suite go-to-market blueprint to convert daily-use engagement (QRIS, transfers, bill payments) into lending adoption.</li>
-                  <li>Built a bi-weekly Voice-of-Customer (VOC) framework and mentored 2 junior researchers, cutting reporting 
-                    turnaround from 10 to 5 days. Resolved middle-funnel bottlenecks, reducing post-peak complaints by 41%.</li>
-                  <li>Mapped payday purchase lifespans across 26,000+ quarterly bill-payment customers and set Multi-Finance 
-                    retention benchmarks (50.4%) to optimize customer lifetime value (LTV).</li>
+                  <li>Applied principal component and factor analysis to 12 psychometric statements and brand health metrics to develop three digital banking personas (digital wealth builders 42%, cautious savers 47%, and conservative beginners 12%), informing a C-suite go-to-market blueprint to convert daily-use engagement (QRIS, transfers, bill payments) into lending adoption.</li>
+                  <li>Built a bi-weekly Voice-of-Customer (VOC) framework and mentored 2 junior researchers, cutting reporting turnaround from 10 to 5 days. Resolved middle-funnel bottlenecks, reducing post-peak complaints by 41%.</li>
+                  <li>Mapped payday purchase lifespans across 26,000+ quarterly bill-payment customers and set Multi-Finance retention benchmarks (50.4%) to optimize customer lifetime value (LTV).</li>
                 </ul>
               </div>
             </article>
 
+            <!-- Bukalapak -->
             <article class="experience-entry">
               <div class="logo-timeline" aria-hidden="true">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/5/5b/Bukalapak_%282020%29.svg"
-                  class="company-logo" alt="Bukalapak Logo">
+                <img 
+                  src="https://upload.wikimedia.org/wikipedia/commons/5/5b/Bukalapak_%282020%29.svg"
+                  class="company-logo" 
+                  alt="Bukalapak Logo"
+                >
                 <div class="timeline-line"></div>
               </div>
               <div class="experience-details">
@@ -170,41 +196,29 @@
                   <span class="entry-date">Jakarta, Indonesia</span>
                 </div>
                 <ul class="bullet-list">
-                  <li>Led a behavioral and retention study of 200 wholesale merchants, covering journeys, conversion lag times, and retention, 
-                    to evaluate dependence on field sales. Self-sufficient users generated 11 lifetime transactions vs. 13 for sales-assisted users. 
-                    Identified high-value, sales-dependent accounts, informing a targeted sales-support strategy that balances operating-cost reduction
-                    with merchant retention.</li>
-                  <li>Diagnosed barriers to game-voucher adoption among 404 micro-retailers through quantitative research and focus groups: knowledge gaps
-                    (62%), perceived lack of customer demand (73%), and low in-store visibility (74% lacked signage). Recommended physical storefront promotions
-                    over costlier digital redesigns or price subsidies.</li>
-                  <li>Segmented 254 money-transfer merchants into high-value “Pareto” and lower-activity “Curve” users, analyzing transaction behavior, merchant 
-                    pricing, and incentive preferences. Identified free administrative-fee quotas as the strongest repeat-usage driver, informing incentive design 
-                    and promotional budget allocation.</li>
-                  <li>Pinpointed urban cellphone/load kiosks in Metro Manila as the priority segment for game-credit acquisition in the Philippines, combining TwoStep 
-                    clustering of 115 active merchants with analysis of 3,154 platform users. Identified competitive advantages in pricing and promotions to inform 
-                    regional go-to-market strategy.</li>
-                  <li>Evaluated premium Korean apparel positioning through mixed-method research among 116 fashion consumers, identifying body type fit, fabric quality, 
-                    and versatility as key purchase drivers. Recommended offline try-on experiences and product filters to differentiate the brand beyond price.</li>
-                  <li>Benchmarked 10+ features against 3-5 primary rivals across 14 competitive intelligence studies, combining survey data with App Annie install metrics, 
-                    YouGovBrandIndex, Google Trends, and Meltwater sentiment. Surfaced high-install/low-retention gaps across e-commerce, O2O, and bookkeeping apps.</li>
+                  <li>Led a behavioral and retention study of 200 wholesale merchants, covering journeys, conversion lag times, and retention, to evaluate dependence on field sales. Self-sufficient users generated 11 lifetime transactions vs. 13 for sales-assisted users. Identified high-value, sales-dependent accounts, informing a targeted sales-support strategy that balances operating-cost reduction with merchant retention.</li>
+                  <li>Diagnosed barriers to game-voucher adoption among 404 micro-retailers through quantitative research and focus groups: knowledge gaps (62%), perceived lack of customer demand (73%), and low in-store visibility (74% lacked signage). Recommended physical storefront promotions over costlier digital redesigns or price subsidies.</li>
+                  <li>Segmented 254 money-transfer merchants into high-value “Pareto” and lower-activity “Curve” users, analyzing transaction behavior, merchant pricing, and incentive preferences. Identified free administrative-fee quotas as the strongest repeat-usage driver, informing incentive design and promotional budget allocation.</li>
+                  <li>Pinpointed urban cellphone/load kiosks in Metro Manila as the priority segment for game-credit acquisition in the Philippines, combining TwoStep clustering of 115 active merchants with analysis of 3,154 platform users. Identified competitive advantages in pricing and promotions to inform regional go-to-market strategy.</li>
+                  <li>Evaluated premium Korean apparel positioning through mixed-method research among 116 fashion consumers, identifying body type fit, fabric quality, and versatility as key purchase drivers. Recommended offline try-on experiences and product filters to differentiate the brand beyond price.</li>
+                  <li>Benchmarked 10+ features against 3-5 primary rivals across 14 competitive intelligence studies, combining survey data with App Annie install metrics, YouGovBrandIndex, Google Trends, and Meltwater sentiment. Surfaced high-install/low-retention gaps across e-commerce, O2O, and bookkeeping apps.</li>
                   <li>Automated Instagram analytics with Python (Instaloader), replacing part of a Socialbakers subscription and cutting third-party data costs by 40%.</li>
-                  <li>Investigated declining engagement with Bukalapak’s “Belanja Bareng” feature (n=401), finding that despite positive name reception (68% Top 2 Box), 
-                    operational and social barriers hindered conversion. Recommended prioritizing feature improvements over rebranding.</li>
-                  <li>Measured usage and awareness of BukaLive (n=1,636), identifying homepage banners (45%) and floating icons (39%) as key discovery channels. Recommended 
-                    optimizing existing discovery mechanisms and adding interactive engagement features rather than a dedicated navigation tab.</li>
-                  <li>Mapped brand ambassador candidates against brand perception attributes for BukaTabungan using correspondence analysis (n=955), informing an endorsement 
-                    strategy that differentiated candidates by trust, approachability, and modernity.</li>
-                  <li>Uncovered cash-flow limitations as the key reason motor spare-parts resellers (n=393) placed frequent small orders, despite satisfaction with product assortment 
-                    and pricing. Identified unconditional free shipping as 2× more effective than complex cashback vouchers at driving retention, informing promotional strategy.</li>
+                  <li>Investigated declining engagement with Bukalapak’s “Belanja Bareng” feature (n=401), finding that despite positive name reception (68% Top 2 Box), operational and social barriers hindered conversion. Recommended prioritizing feature improvements over rebranding.</li>
+                  <li>Measured usage and awareness of BukaLive (n=1,636), identifying homepage banners (45%) and floating icons (39%) as key discovery channels. Recommended optimizing existing discovery mechanisms and adding interactive engagement features rather than a dedicated navigation tab.</li>
+                  <li>Mapped brand ambassador candidates against brand perception attributes for BukaTabungan using correspondence analysis (n=955), informing an endorsement strategy that differentiated candidates by trust, approachability, and modernity.</li>
+                  <li>Uncovered cash-flow limitations as the key reason motor spare-parts resellers (n=393) placed frequent small orders, despite satisfaction with product assortment and pricing. Identified unconditional free shipping as 2× more effective than complex cashback vouchers at driving retention, informing promotional strategy.</li>
                 </ul>
               </div>
             </article>
 
+            <!-- YouGov -->
             <article class="experience-entry">
               <div class="logo-timeline" aria-hidden="true">
                 <img
                   src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/YouGov-2019.svg/1280px-YouGov-2019.svg.png?_=20220206130701"
-                  class="company-logo" alt="YouGov Logo">
+                  class="company-logo" 
+                  alt="YouGov Logo"
+                >
               </div>
               <div class="experience-details">
                 <div class="entry-header">
@@ -216,61 +230,64 @@
                   <span class="entry-date">Jakarta, Indonesia</span>
                 </div>
                 <ul class="bullet-list">
-                  <li>Ran 20+ annual quantitative research projects across CPG, beauty, travel, telecom, fintech, and healthtech, including concept testing, brand tracking, and advertising 
-                    effectiveness, translating findings into product positioning and marketing recommendations.</li>
-                  <li>Tracked Gojek’s brand health monthly (n=1,375/month, 11 cities). Showed dual-app users made up 35%+ of the market and spent ~25-30% more than single-app users, supporting 
-                    a shift from price promotions to trust-based messaging.</li>
-                  <li>Evaluated 6 waves of ad diagnostics for Traveloka (n=9,602, 15 TVCs), finding unbranded recall of just 16-27% vs. 53-55% for competitors, which informed a redesign of brand 
-                    visual cues.</li>
+                  <li>Ran 20+ annual quantitative research projects across CPG, beauty, travel, telecom, fintech, and healthtech, including concept testing, brand tracking, and advertising effectiveness, translating findings into product positioning and marketing recommendations.</li>
+                  <li>Tracked Gojek’s brand health monthly (n=1,375/month, 11 cities). Showed dual-app users made up 35%+ of the market and spent ~25-30% more than single-app users, supporting a shift from price promotions to trust-based messaging.</li>
+                  <li>Evaluated 6 waves of ad diagnostics for Traveloka (n=9,602, 15 TVCs), finding unbranded recall of just 16-27% vs. 53-55% for competitors, which informed a redesign of brand visual cues.</li>
                   <li>Redesigned omnibus research workflows, cutting project turnaround from 5 to 3 days and speeding up insight one-pagers that helped win new custom research clients.</li>
                 </ul>
               </div>
             </article>
+
           </div>
         </div>
 
-        <!-- Skills Row -->
+        <!-- SKILLS ROW -->
         <div class="resume-row">
           <div class="resume-side">
             <h5 class="side-label">Skills</h5>
           </div>
           <div class="resume-main">
             <div class="skills-grid-seamless">
+
               <div class="skill-group">
                 <h5 class="skill-cat-title">Strategic & business</h5>
-                <p class="skill-text">Data storytelling, insight synthesis, competitive intelligence, market sizing,
-                  product analytics, segmentation.</p>
+                <p class="skill-text">Data storytelling, insight synthesis, competitive intelligence, market sizing, product analytics, segmentation.</p>
               </div>
+
               <div class="skill-group">
                 <h5 class="skill-cat-title">Quantitative research & statistics</h5>
-                <p class="skill-text">Survey design, questionnaire development, Qualtrics, SurveyMonkey, Typeform, A/B
-                  testing, regression, clustering, conjoint analysis, ANOVA.</p>
+                <p class="skill-text">Survey design, questionnaire development, Qualtrics, SurveyMonkey, Typeform, A/B testing, regression, clustering, conjoint analysis, ANOVA.</p>
               </div>
+
               <div class="skill-group">
                 <h5 class="skill-cat-title">Qualitative & UX research</h5>
-                <p class="skill-text">In-depth interviews (IDI), focus groups (FGD), usability testing, thematic
-                  analysis, content analysis, journey mapping.</p>
+                <p class="skill-text">In-depth interviews (IDI), focus groups (FGD), usability testing, thematic analysis, content analysis, journey mapping.</p>
               </div>
+
               <div class="skill-group">
                 <h5 class="skill-cat-title">Technical & data tools</h5>
-                <p class="skill-text">SQL (query & script modification), R, Python (pandas), SPSS, Tableau, Looker,
-                  Google Data Studio, Figma, Jira, Microsoft Excel, Microsoft PowerPoint, Canva.</p>
+                <p class="skill-text">SQL (query & script modification), R, Python (pandas), SPSS, Tableau, Looker, Google Data Studio, Figma, Jira, Microsoft Excel, Microsoft PowerPoint, Canva.</p>
               </div>
+
             </div>
           </div>
         </div>
 
-        <!-- Education Row -->
+        <!-- EDUCATION ROW -->
         <div class="resume-row">
           <div class="resume-side">
             <h5 class="side-label">Education</h5>
           </div>
           <div class="resume-main">
+
+            <!-- NYU -->
             <article class="experience-entry">
               <div class="logo-timeline" aria-hidden="true">
                 <img
                   src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Nyu_short_color.svg/250px-Nyu_short_color.svg.png?_=20160408170647"
-                  class="company-logo" alt="NYU Logo">
+                  class="company-logo" 
+                  alt="NYU Logo"
+                >
                 <div class="timeline-line"></div>
               </div>
               <div class="experience-details">
@@ -279,19 +296,23 @@
                   <span class="entry-date">Jan 2024 – Jan 2026</span>
                 </div>
                 <div class="entry-header">
-                  <p class="role-title">New York University
-                  <p>
-                    <span class="entry-date">New York, NY</span>
+                  <p class="role-title">New York University</p>
+                  <span class="entry-date">New York, NY</span>
                 </div>
-                <p class="edu-details"><strong>GPA:</strong> 4.00/4.00. Research Assitant at the Trope Lab (led a team of 5 research assistants). Grader for
-                  Introduction to Psychology (PSYCH-UA).</p>
+                <p class="edu-details">
+                  <strong>GPA:</strong> 4.00/4.00. Research Assistant at the Trope Lab (led a team of 5 research assistants). Grader for Introduction to Psychology (PSYCH-UA).
+                </p>
               </div>
             </article>
 
+            <!-- UGM -->
             <article class="experience-entry">
               <div class="logo-timeline" aria-hidden="true">
-                <img src="https://static.igem.org/mediawiki/2021/1/13/T--UGM_Indonesia--img--sponsor-ugm.png"
-                  class="company-logo" alt="UGM Logo">
+                <img 
+                  src="https://static.igem.org/mediawiki/2021/1/13/T--UGM_Indonesia--img--sponsor-ugm.png"
+                  class="company-logo" 
+                  alt="UGM Logo"
+                >
               </div>
               <div class="experience-details">
                 <div class="entry-header">
@@ -299,22 +320,24 @@
                   <span class="entry-date">Aug 2014 — Jul 2018</span>
                 </div>
                 <div class="entry-header">
-                  <p class="role-title">Universitas Gadjah Mada
-                  <p>
-                    <span class="entry-date">Yogyakarta, Indonesia</span>
+                  <p class="role-title">Universitas Gadjah Mada</p>
+                  <span class="entry-date">Yogyakarta, Indonesia</span>
                 </div>
-                <p class="edu-details"><strong>GPA:</strong> 3.89/4.00. Silver medal in national psychometrics
-                  competition.</p>
+                <p class="edu-details">
+                  <strong>GPA:</strong> 3.89/4.00. Silver medal in national psychometrics competition.
+                </p>
               </div>
             </article>
+
           </div>
         </div>
 
       </div>
     </section>
+
   </main>
 
-{% include footer.html %}
-  
+  {% include footer.html %}
+
 </body>
 </html>
