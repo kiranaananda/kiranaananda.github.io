@@ -248,5 +248,37 @@
 
   {% include footer.html %}
 
+   <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      
+      /* --- SVG Onion Layer Interaction --- */
+      function linkLayer(triggerId, targetId) {
+        const trigger = document.getElementById(triggerId);
+        const target = document.getElementById(targetId);
+        const allOverlays = document.querySelectorAll('.data-card'); 
+
+        if(trigger && target) {
+            trigger.addEventListener('mouseenter', () => {
+                allOverlays.forEach(el => el.classList.remove('active'));
+                target.classList.add('active');
+            });
+        }
+      }
+
+      linkLayer('trigger-outer', 'data-outer');
+      linkLayer('trigger-middle', 'data-middle');
+      linkLayer('trigger-inner', 'data-inner');
+
+      const onionSvg = document.querySelector('.onion-svg');
+      if (onionSvg) {
+        onionSvg.addEventListener('mouseleave', () => {
+            document.querySelectorAll('.data-card').forEach(el => el.classList.remove('active'));
+            const defaultCard = document.getElementById('data-default');
+            if (defaultCard) defaultCard.classList.add('active');
+        });
+      }
+    });
+  </script>
+
 </body>
 </html>
