@@ -535,7 +535,7 @@ padding: 8vh 0 30vh;
 .scattered-bounds {
 display: flex;
 flex-direction: column;
-padding-top: 5vh;
+padding-bottom: 5vh;
 }
 
 .scattered-item {
